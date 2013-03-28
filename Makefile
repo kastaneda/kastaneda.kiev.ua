@@ -28,7 +28,7 @@ style.css: style.less Makefile
 clean:
 	rm -f $(TARGET_PAGES) style.css
 
-upload:
+upload: all
 	rsync -av --exclude-from=rsync_exclude . $(HOSTING)
 
 .PHONY: all clean upload
