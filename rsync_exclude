@@ -1,0 +1,8 @@
+.git/
+.gitignore
+*.md
+*.less
+template.html
+README
+Makefile
+rsync_exclude

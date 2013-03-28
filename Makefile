@@ -8,6 +8,8 @@ LESS = lessc --compress
 SOURCE_PAGES = $(shell find . -type f -name '*.md')
 TARGET_PAGES = $(patsubst %.md,%.html,$(SOURCE_PAGES))
 
+HOSTING = /var/www/kastaneda.kiev.ua
+
 all: $(TARGET_PAGES) style.css
 
 # special case: I want to add extra headers
@@ -26,4 +28,7 @@ style.css: style.less Makefile
 clean:
 	rm -f $(TARGET_PAGES) style.css
 
-.PHONY: all clean
+upload:
+	rsync -av --exclude-from=rsync_exclude . $(HOSTING)
+
+.PHONY: all clean upload
