@@ -1,6 +1,6 @@
 
 # sudo apt-get install pandoc
-MARKDOWN = pandoc --from markdown --to html5 --css style.css --standalone
+MARKDOWN = pandoc --from markdown --to html5 --template template.html --standalone
 
 # sudo apt-get install node-less
 LESS = lessc --compress
@@ -13,13 +13,13 @@ HOSTING = /var/www/kastaneda.kiev.ua
 all: $(TARGET_PAGES) style.css
 
 # special case: I want to add extra headers
-index.html: index.md Makefile
+index.html: index.md Makefile template.html
 	$(MARKDOWN) \
 		--variable 'header-includes:<link rel="openid.server" href="http://www.myopenid.com/server/">' \
 		--variable 'header-includes:<link rel="openid.delegate" href="http://kastaneda.myopenid.com/">' \
 		$< --output $@
 
-%.html: %.md Makefile
+%.html: %.md Makefile template.html
 	$(MARKDOWN) $< --output $@
 
 style.css: style.less Makefile
