@@ -10,6 +10,13 @@ TARGET_PAGES = $(patsubst %.md,%.html,$(SOURCE_PAGES))
 
 all: $(TARGET_PAGES) style.css
 
+# special case: I want to add extra headers
+index.html: index.md Makefile
+	$(MARKDOWN) \
+		--variable 'header-includes:<link rel="openid.server" href="http://www.myopenid.com/server/">' \
+		--variable 'header-includes:<link rel="openid.delegate" href="http://kastaneda.myopenid.com/">' \
+		$< --output $@
+
 %.html: %.md Makefile
 	$(MARKDOWN) $< --output $@
 
