@@ -1,6 +1,6 @@
 
 # sudo apt-get install pandoc
-MARKDOWN = pandoc --from markdown --to html --css style.css --standalone
+MARKDOWN = pandoc --from markdown --to html5 --css style.css --standalone
 
 # sudo apt-get install node-less
 LESS = lessc --compress
