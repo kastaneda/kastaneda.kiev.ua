@@ -19,8 +19,9 @@
  * [раз](/another-page.html)
  * [два](/yet-another-page.html)
 
-| <https://developers.facebook.com/docs/reference/plugins/comments/>
-| <https://developers.facebook.com/tools/comments>
+<https://developers.facebook.com/docs/reference/plugins/comments/>
+
+<https://developers.facebook.com/tools/comments>
 
 -----
 
