@@ -6,4 +6,5 @@ template.html
 README
 Makefile
 rsync_exclude
+build.sh
 _build*
