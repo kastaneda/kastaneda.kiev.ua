@@ -19,6 +19,7 @@
  * [раз](/another-page.html)
  * [два](/yet-another-page.html)
  * [три](/new-page.html)
+ * [четыре](/sample-source-code.html)
 
 <https://developers.facebook.com/docs/reference/plugins/comments/>
 
