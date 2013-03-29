@@ -11,9 +11,10 @@ $if(is-index)$
     <link rel="openid.delegate" href="http://kastaneda.myopenid.com/">
 $endif$
     <meta property="fb:app_id" content="400424936721386">
+    <meta property="fb:admins" content="100000567653115">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="kastaneda.kiev.ua">
-    <script type="text/javascript">
+    <script>
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-7610138-1']);
         _gaq.push(['_trackPageview']);
@@ -25,18 +26,22 @@ $endif$
     </script>
 </head>
 <body>
+$if(page-path)$
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+$endif$
 
 $body$
 
 $if(page-path)$
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1&appId=400424936721386";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
     <div class="fb-comments" data-href="http://kastaneda.kiev.ua/$page-path$" data-width="800" data-num-posts="50" data-order-by="time"></div>
 $endif$
 </body>
