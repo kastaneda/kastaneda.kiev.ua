@@ -10,6 +10,18 @@
 сделанную из говна, клея ПВА, github webhooks, кронтаба, скриптов
 и файлов-флагов. Вроде работает.
 
+Живёт это всё тут: <https://github.com/kastaneda/homepage>
+
+-----
+
+Так, вот ещё пара страниц:
+
+ * [раз](/another-page.html)
+ * [два](/yet-another-page.html)
+
+| <https://developers.facebook.com/docs/reference/plugins/comments/>
+| <https://developers.facebook.com/tools/comments>
+
 -----
 
 А вот старая версия моего сайта:

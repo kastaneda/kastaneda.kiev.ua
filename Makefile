@@ -4,23 +4,21 @@ MARKDOWN = pandoc --from markdown --to html5 --template template.html --standalo
 
 # sudo apt-get install node-less
 LESS = lessc --compress
+# | sed 's#.*/##'
 
 SOURCE_PAGES = $(shell find . -type f -name '*.md')
-TARGET_PAGES = $(patsubst %.md,%.html,$(SOURCE_PAGES))
+TARGET_PAGES = $(patsubst ./%.md,%.html,$(SOURCE_PAGES))
 
 HOSTING = /var/www/kastaneda.kiev.ua
 
 all: $(TARGET_PAGES) style.css
 
-# special case: I want to add extra headers
+# special case for front page
 index.html: index.md Makefile template.html
-	$(MARKDOWN) \
-		--variable 'header-includes:<link rel="openid.server" href="http://www.myopenid.com/server/">' \
-		--variable 'header-includes:<link rel="openid.delegate" href="http://kastaneda.myopenid.com/">' \
-		$< --output $@
+	$(MARKDOWN) --variable "is-index" index.md --output index.html
 
 %.html: %.md Makefile template.html
-	$(MARKDOWN) $< --output $@
+	$(MARKDOWN) --variable "page-path:$@" $< --output $@
 
 style.css: style.less Makefile
 	$(LESS) $< > $@
