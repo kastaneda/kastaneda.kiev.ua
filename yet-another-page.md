@@ -9,4 +9,4 @@
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="fb-comments" data-href="http://kastaneda.kiev.ua" data-width="800" data-num-posts="50"></div>
+<div class="fb-comments" data-href="http://kastaneda.kiev.ua/yet-another-page.html" data-width="800" data-num-posts="50"></div>
