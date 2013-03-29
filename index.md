@@ -18,6 +18,7 @@
 
  * [раз](/another-page.html)
  * [два](/yet-another-page.html)
+ * [три](/new-page.html)
 
 <https://developers.facebook.com/docs/reference/plugins/comments/>
 
