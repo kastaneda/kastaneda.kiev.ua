@@ -29,6 +29,6 @@ clean:
 	rm -f $(TARGET_PAGES) style.css
 
 upload: all
-	rsync -av --exclude-from=rsync_exclude . $(HOSTING)
+	rsync -av --delete --exclude-from=rsync_exclude . $(HOSTING)
 
 .PHONY: all clean upload
