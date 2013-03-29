@@ -1,4 +1,3 @@
-
 # sudo apt-get install pandoc
 MARKDOWN = pandoc --from markdown --to html5 --template template.html --standalone
 
