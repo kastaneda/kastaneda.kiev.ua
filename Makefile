@@ -3,12 +3,11 @@ MARKDOWN = pandoc --from markdown --to html5 --template template.html --standalo
 
 # sudo apt-get install node-less
 LESS = lessc --compress
-# | sed 's#.*/##'
 
 SOURCE_PAGES = $(shell find . -type f -name '*.md')
 TARGET_PAGES = $(patsubst ./%.md,%.html,$(SOURCE_PAGES))
 
-HOSTING = /var/www/kastaneda.kiev.ua
+HOSTING = kastaneda@rico:/var/www/kastaneda.kiev.ua
 
 all: $(TARGET_PAGES) style.css
 
