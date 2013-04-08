@@ -9,7 +9,7 @@ TARGET_PAGES = $(patsubst ./%.md,%.html,$(SOURCE_PAGES))
 
 HOSTING = kastaneda@rico:/var/www/kastaneda.kiev.ua
 
-all: $(TARGET_PAGES) style.css
+all: $(TARGET_PAGES) sitemap.xml style.css
 
 # special case for front page
 index.html: index.md Makefile template.html
@@ -17,6 +17,9 @@ index.html: index.md Makefile template.html
 
 %.html: %.md Makefile template.html
 	$(MARKDOWN) --variable "page-path:$@" $< --output $@
+
+sitemap.xml: $(TARGET_PAGES) Makefile sitemap.sh
+	./sitemap.sh $(TARGET_PAGES) > sitemap.xml
 
 style.css: style.less Makefile
 	$(LESS) $< > $@
