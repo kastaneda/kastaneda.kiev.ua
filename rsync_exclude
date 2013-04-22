@@ -1,8 +1,8 @@
 .git/
 .gitignore
 *.md
-*.less
-template.html
+style/*.less
+style/template.html
 README
 Makefile
 rsync_exclude
