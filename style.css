@@ -1,11 +1,6 @@
-body{max-width:45em;margin:1em auto;}
-body{font-family:'PT Sans',Arial,Helvetica,sans-serif;font-size:18px;line-height:24px;}
+body{max-width:45em;margin:1em auto;font-family:'PT Sans',Arial,Helvetica,sans-serif;font-size:18px;line-height:24px;}
+hr{border:none;border-bottom:thin dashed;}
 pre,code,tt{font-family:'Anonymous Pro',monospace;font-size:inherit;line-height:inherit;}
-body{color:#000;background:#fff;}
-a:link{color:#009;text-decoration:underline;}
-a:visited{color:#609;}a:visited:hover{color:#90c;background:lime;}
-a:hover{color:#00c;background:yellow;}
-a:active{color:#900;}
 table.sourceCode{width:100%;}table.sourceCode,table.sourceCode tr.sourceCode,table.sourceCode td.lineNumbers,table.sourceCode td.sourceCode{margin:0;padding:0;vertical-align:baseline;border:none;}
 table.sourceCode td.lineNumbers{text-align:right;padding-right:4px;padding-left:4px;color:#aaaaaa;border-right:1px solid #aaaaaa;}
 table.sourceCode td.sourceCode{padding-left:5px;}
@@ -21,5 +16,3 @@ code .ot{color:#007020;}
 code .al{color:#ff0000;font-weight:bold;}
 code .fu{color:#06287e;}
 code .er{color:#ff0000;font-weight:bold;}
-.fb-comments,.fb-comments span,.fb-comments iframe{width:100% !important;}
-hr{border:none;border-bottom:thin dashed;}

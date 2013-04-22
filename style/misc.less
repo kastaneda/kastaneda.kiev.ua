@@ -1,5 +1,13 @@
 
 hr {
-    border: none;
-    border-bottom: thin dashed;
+    margin: 12px 0 11px 0;
+    border-bottom: 1px dashed;
+}
+
+p+hr, ul+hr, ol+hr {
+    margin-top: -12px;
+}
+
+hr+p, hr+ul, hr+ol {
+    margin-top: 11px;
 }
