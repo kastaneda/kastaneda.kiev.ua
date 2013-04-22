@@ -14,8 +14,6 @@
  * <https://developers.facebook.com/docs/reference/plugins/comments/>
  * <https://developers.facebook.com/tools/comments>
 
-Бла бла бла
-
 -----
 
 Планы на ближайшее время:
@@ -28,6 +26,8 @@
  * сделать умный обработчик 404 и натолкать в него ссылок, которые были
  * сделать карту сайта (человеческую)
  * мобильная и бумажная версия стилей
+ * pixel perfection: разобраться, почему monospaced шрифты рендерятся
+   по-разному в Iceweasel и Chroumium (а именно — косяки в списках)
 
 -----
 
