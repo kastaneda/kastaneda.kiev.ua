@@ -2,8 +2,6 @@
 
 Ну, с почином!
 
-<p class="zzz">test</p>
-
 Тут будет новая версия моего сайта. Собственно, это уже новый сайт.
 Я пишу этот текст в формате Markdown и генерирую страницы при помощи
 программы [Pandoc](http://johnmacfarlane.net/pandoc/) (и ещё GNU make).
@@ -11,12 +9,6 @@
 А ещё я прикрутил к этому всему примитивную Continuous Integration,
 сделанную из говна, клея ПВА, github webhooks, кронтаба, скриптов
 и файлов-флагов. Вроде работает.
-
- * <https://github.com/kastaneda/homepage>
- * <https://developers.facebook.com/docs/reference/plugins/comments/>
- * <https://developers.facebook.com/tools/comments>
-
-Факин шит, опять Iceweasel рендерит неправильно.
 
 -----
 
@@ -31,7 +23,7 @@
  * сделать карту сайта (человеческую)
  * мобильная и бумажная версия стилей
  * pixel perfection: разобраться, почему monospaced шрифты рендерятся
-   по-разному в Iceweasel и Chroumium (а именно — косяки в списках)
+   по-разному в Iceweasel и Chroumium (см. Ctrl-A, косяки в списках)
 
 -----
 
@@ -42,6 +34,13 @@
  * /dotfiles
  * /misc
     - [/misc/lleo.html](/misc/lleo.html)
+
+Ссылки для себя самого
+----------------------
+
+ * <https://github.com/kastaneda/homepage>
+ * <https://developers.facebook.com/docs/reference/plugins/comments/>
+ * <https://developers.facebook.com/tools/comments>
 
 -----
 
