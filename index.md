@@ -2,6 +2,8 @@
 
 Ну, с почином!
 
+<p class="zzz">test</p>
+
 Тут будет новая версия моего сайта. Собственно, это уже новый сайт.
 Я пишу этот текст в формате Markdown и генерирую страницы при помощи
 программы [Pandoc](http://johnmacfarlane.net/pandoc/) (и ещё GNU make).
@@ -13,6 +15,8 @@
  * <https://github.com/kastaneda/homepage>
  * <https://developers.facebook.com/docs/reference/plugins/comments/>
  * <https://developers.facebook.com/tools/comments>
+
+Факин шит, опять Iceweasel рендерит неправильно.
 
 -----
 
