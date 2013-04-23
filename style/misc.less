@@ -2,12 +2,10 @@
 hr {
     margin: 12px 0 11px 0;
     border-bottom: 1px dashed;
-}
-
-p+hr, ul+hr, ol+hr {
-    margin-top: -12px;
-}
-
-hr+p, hr+ul, hr+ol {
-    margin-top: 11px;
+    p+&, ul+&, ol+& {
+        margin-top: -12px;
+    }
+    &+p, &+ul, &+ol {
+        margin-top: 11px;
+    }
 }
