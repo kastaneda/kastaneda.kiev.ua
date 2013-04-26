@@ -13,10 +13,10 @@ all: $(TARGET_PAGES) sitemap.xml style/main.css
 
 # special case for front page
 index.html: index.md Makefile style/template.html
-	$(MARKDOWN) --variable "is-index" index.md --output index.html
+	$(MARKDOWN) --variable "is-index" --variable "root-path:" index.md --output index.html
 
 %.html: %.md Makefile style/template.html
-	$(MARKDOWN) --variable "page-path:$@" $< --output $@
+	$(MARKDOWN) --variable "page-path:$@" --variable "root-path:$(patsubst %,../,$(subst /, ,$(dir $<)))" $< --output $@
 
 sitemap.xml: $(TARGET_PAGES) Makefile sitemap.sh
 	./sitemap.sh $(TARGET_PAGES) > sitemap.xml

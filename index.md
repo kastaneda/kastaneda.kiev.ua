@@ -24,7 +24,7 @@
  * мобильная и бумажная версия стилей
  * pixel perfection: разобраться, почему monospaced шрифты рендерятся
    по-разному в Iceweasel и Chroumium (см. Ctrl-A, косяки в списках)
- * перекомпоновать *.less как-то более удобно (например по блокам - body.less,
+ * перекомпоновать .less как-то более удобно (например по блокам - body.less,
    text.less (для p, pre и h1), links.less (:visited, :hover) и так далее)
 
 -----
@@ -32,10 +32,10 @@
 Карта сайта (заглушка)
 ----------------------
 
- * /about
- * /dotfiles
- * /misc
-    - [/misc/lleo.html](/misc/lleo.html)
+ * about
+ * dotfiles
+ * misc
+    - [misc/lleo.html](misc/lleo.html)
 
 Ссылки для себя самого
 ----------------------
