@@ -28,7 +28,7 @@ $endif$
     <script src="$root-path$style/debug.js"></script>
 </head>
 <body>
-$if(page-path)$
+$if(is-not-index)$
     <div id="fb-root"></div>
     <script>
         (function(d, s, id) {
@@ -43,7 +43,7 @@ $endif$
 
 $body$
 
-$if(page-path)$
+$if(is-not-index)$
     <div class="fb-comments" data-href="http://kastaneda.kiev.ua/$page-path$" data-width="800" data-num-posts="50" data-order-by="time"></div>
 $endif$
 </body>
