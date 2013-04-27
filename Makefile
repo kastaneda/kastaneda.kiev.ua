@@ -30,7 +30,7 @@ style/main.css: style/*.less Makefile
 	$(LESS) --compress style/main.less > $@
 
 clean:
-	rm -f $(TARGET_PAGES) style/main.css
+	rm -f $(TARGET_PAGES) style/main.css sitemap.xml
 
 upload: all
 	rsync -av --delete --exclude-from=rsync_exclude . $(HOSTING)
