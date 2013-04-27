@@ -3,7 +3,6 @@
 *.md
 style/*.less
 style/template.html
-README
 Makefile
 rsync_exclude
 build.sh
