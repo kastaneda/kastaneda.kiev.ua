@@ -9,22 +9,27 @@ b, strong {
 
 a {
     &:link {
-        color: #009;
+        color: @link-color;
         text-decoration: underline;
     }
     &:hover {
-        color: #00c;
+        color: @link-color + @hover-delta;
     }
     &:visited {
-        color: #609;
+        color: @visited-color;
         &:hover {
-            color: #90c;
+            color: @visited-color + @hover-delta;
         }
     }
     &:active, &:visited:active {
-        color: #900;
+        color: @active-color;
     }
     &:focus {
         outline: thin dotted;
     }
+}
+
+del {
+    text-decoration: line-through;
+    color: @muted-color;
 }
