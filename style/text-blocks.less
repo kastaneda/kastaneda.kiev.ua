@@ -4,7 +4,7 @@ h1, h2, h3 {
 }
 
 p, ul, ol, pre {
-    margin: 24px 0;
+    margin: @line 0;
 }
 
 li {
@@ -15,20 +15,20 @@ li {
 }
 
 h1, h2, h3 {
-    margin: 24px 0;
+    margin: @line 0;
 }
 
 h1 {
-    font-size: 48px;
-    line-height: 72px;
+    font-size: @font-h1-size;
+    line-height: ceil((@font-h1-size + 1px) / @line) * @line;
 }
 
 h2 {
-    font-size: 36px;
-    line-height: 48px;
+    font-size: @font-h2-size;
+    line-height: ceil((@font-h2-size + 1px) / @line) * @line;
 }
 
 h3 {
-    font-size: 30px;
-    line-height: 48px;
+    font-size: @font-h3-size;
+    line-height: ceil((@font-h3-size + 1px) / @line) * @line;
 }
