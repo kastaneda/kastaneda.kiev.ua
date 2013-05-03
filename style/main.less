@@ -3,15 +3,15 @@
 
 ////////////////////////////////////////////////////////////////////////
 
-@background-color: #000;
-@text-color: #fff;
+@background-color: #fff;
+@text-color: #000;
 
 @muted-color: #666;
 @header-color: #066;
 
-@link-color: #33c;
-@visited-color: #60c;
-@active-color: #c00;
+@link-color: #009;
+@visited-color: #609;
+@active-color: #c33;
 @link-hover-color: @link-color + #333;
 @visited-hover-color: @visited-color + #333;
 
@@ -22,7 +22,7 @@
 @font-h2-size: 36px;
 @font-h3-size: 28px;
 
-@debug-background: "line-height-@{line}.png";
+@debug-background: %("line-height-%a.png", @line);
 
 ////////////////////////////////////////////////////////////////////////
 
