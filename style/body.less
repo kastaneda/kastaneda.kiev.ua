@@ -15,3 +15,11 @@ body {
         background: @background-color url(@debug-background) left top;
     }
 }
+
+::selection {
+    background: @selection-color;
+}
+
+::-moz-selection {
+    background: @selection-color;
+}
