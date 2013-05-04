@@ -3,26 +3,27 @@
 
 ////////////////////////////////////////////////////////////////////////
 
-@background-color: #fff;
-@text-color: #000;
+@background-color: #fff;        // основной фон
+@text-color: #000;              // основной текст
 
-@muted-color: #666;
-@header-color: #066;
-@selection-color: #ff9;
+@muted-color: #666;             // приглушённый цвет текста
+@header-color: #066;            // цвет текста h1, h2, h3
+@selection-color: #ff9;         // фон выделения текста
 
-@link-color: #009;
+@link-color: #009;              // все ссылки
 @visited-color: #609;
 @active-color: #c33;
 @link-hover-color: @link-color + #333;
 @visited-hover-color: @visited-color + #333;
 
-@line: 24px;
-@font-size: 18px;
+@line: 24px;                    // высота строки
+@font-size: 18px;               // размер основного текста
 
-@font-h1-size: 48px; 
+@font-h1-size: 48px;
 @font-h2-size: 36px;
-@font-h3-size: 28px;
+@font-h3-size: 28px;            // высота строки вычисляется кратной @line
 
+// «полосатый» фон есть для строк высотой 18, 20, 22 и 24px
 @debug-background: %("line-height-%a.png", @line);
 
 ////////////////////////////////////////////////////////////////////////
