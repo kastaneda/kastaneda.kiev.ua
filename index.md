@@ -35,9 +35,21 @@
 ----------------------
 
  * about
+    - ~~контакты?~~ (или всё на титульник?)
+    - GnuPG public key
+    - про копирайты на все тексты сайта
  * dotfiles
+    - домашний каталог в svn
+    - zshrc
+    - vimrc
+    - fluxbox
+        * тема оформления
+        * хоткеи
+        * меню
+    - xdg-dirs, sshsf, ~/.bin/mnt
+    - mpc + ncmpcpp + aumix + amixer
  * misc
-    - [misc/lleo.html](misc/lleo.html)
+    - [привет Каганову!](misc/lleo.html)
 
 Ссылки для себя самого
 ----------------------
