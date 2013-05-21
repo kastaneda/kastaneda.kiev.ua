@@ -1,12 +1,6 @@
 Ну, с почином!
 
 Тут будет новая версия моего сайта. Собственно, это уже новый сайт.
-Я пишу этот текст в формате Markdown и генерирую страницы при помощи
-программы [Pandoc](http://johnmacfarlane.net/pandoc/) (и ещё GNU make).
-
-А ещё я прикрутил к этому всему примитивную Continuous Integration,
-сделанную из говна, клея ПВА, github webhooks, кронтаба, скриптов
-и файлов-флагов. Вроде работает.
 
 -----
 
@@ -47,17 +41,11 @@
     - xdg-dirs, sshsf, ~/.bin/mnt
     - mpc + ncmpcpp + aumix + amixer
  * webdev
-    - этот сайт: система сборки
-    - этот сайт: комменты
+    - этот сайт
+        * [система сборки](webdev/this/build.html)
+        * [комменты](webdev/this/comments.html)
  * misc
     - [привет Каганову!](misc/lleo.html)
-
-Ссылки для себя самого
-----------------------
-
- * <https://github.com/kastaneda/homepage>
- * <https://developers.facebook.com/docs/reference/plugins/comments/>
- * <https://developers.facebook.com/tools/comments>
 
 -----
 
