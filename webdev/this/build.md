@@ -13,23 +13,28 @@
 Никакая куцая textarea не сможет дать мне всего того, что у меня есть
 в полноценном текстовом редакторе.
 
-HTML-страницы собираются из Markdown'а при помощи программы
-[Pandoc](http://johnmacfarlane.net/pandoc/) (а также GNU make и набора
-моих скриптов). Кроме того, CSS собирается при помощи препроцессора
-[LESS](http://lesscss.org/). Для меня этот подход оказался очень удобным.
-Всё это вместе взятое (тексты сайта, оформление и система сборки) хранится
-в [Git-репозитории](https://github.com/kastaneda/homepage).
+HTML-страницы собираются из Markdown'а при помощи программы [Pandoc][1]
+(а также GNU make и набора моих скриптов). Кроме того, CSS собирается
+при помощи препроцессора [LESS][2]. Всё это вместе взятое (тексты сайта,
+оформление и система сборки) хранится в [Git-репозитории][3].
+Для меня этот подход оказался очень удобным.
 
 Как это работает
 ----------------
 
+Для сборки требуется GNU make, Pandoc и LESS.
+Установка не требует никаких танцев с бубном, это всё есть
+в основном репозитории Debian'а:
+
+```sh
+sudo apt-get install make pandoc node-less
+```
+
 Первый вариант соответствующего Makefile выглядел как-то так:
 
 ```Makefile
-# sudo apt-get install pandoc
 MARKDOWN = pandoc --from markdown --to html5 --css style.css --standalone
 
-# sudo apt-get install node-less
 LESS = lessc --compress
 
 SOURCE_PAGES = $(shell find . -type f -name '*.md')
@@ -49,7 +54,7 @@ rm -f $(TARGET_PAGES) style.css
 .PHONY: all clean
 ```
 
-Сейчас всё устроено сложнее, но базовый принцип остался точно таким же.
+Сейчас всё устроено [сложнее][4], но базовый принцип остался точно таким же.
 
 Веб-интерфейс
 -------------
@@ -68,3 +73,8 @@ Continuous Integration
 и файлов-флагов. Вроде работает.
 
 TODO: описать CI.
+
+[1]: http://johnmacfarlane.net/pandoc/
+[2]: http://lesscss.org/
+[3]: https://github.com/kastaneda/homepage
+[4]: https://github.com/kastaneda/homepage/blob/master/Makefile
