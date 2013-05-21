@@ -48,6 +48,9 @@
         * меню
     - xdg-dirs, sshsf, ~/.bin/mnt
     - mpc + ncmpcpp + aumix + amixer
+ * webdev
+    - этот сайт: система сборки
+    - этот сайт: комменты
  * misc
     - [привет Каганову!](misc/lleo.html)
 
