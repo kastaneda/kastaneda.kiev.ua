@@ -43,13 +43,13 @@ TARGET_PAGES = $(patsubst %.md,%.html,$(SOURCE_PAGES))
 all: $(TARGET_PAGES) style.css
 
 %.html: %.md Makefile
-$(MARKDOWN) $< --output $@
+    $(MARKDOWN) $< --output $@
 
 style.css: style.less Makefile
-$(LESS) $< > $@
+    $(LESS) $< > $@
 
 clean:
-rm -f $(TARGET_PAGES) style.css
+    rm -f $(TARGET_PAGES) style.css
 
 .PHONY: all clean
 ```
