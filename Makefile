@@ -9,6 +9,9 @@ TARGET_PAGES = $(patsubst ./%.md,%.html,$(SOURCE_PAGES))
 
 HOSTING = kastaneda@rico:/var/www/kastaneda.kiev.ua
 
+NOOP =
+SPACE = $(NOOP) $(NOOP)
+
 all: $(TARGET_PAGES) sitemap.xml style/main.css
 
 %.html: %.md Makefile style/template.html
@@ -18,7 +21,7 @@ all: $(TARGET_PAGES) sitemap.xml style/main.css
 	--standalone \
 	--template style/template.html \
 	--variable "$(if $(filter index.md,$<),is-index,is-not-index)" \
-	--variable "root-path:$(patsubst %,../,$(subst /, ,$(patsubst ./,,$(dir $<))))" \
+	--variable "root-path:$(subst $(SPACE),,$(patsubst %,../,$(subst /, ,$(patsubst ./,,$(dir $<)))))" \
 	--variable "page-path:$@" \
 	$< \
 	--output $@
