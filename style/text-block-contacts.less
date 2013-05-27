@@ -12,14 +12,15 @@
 }
 
 @media (min-width: 30em) {
+    @contacts-left-column: 8em;
     .contacts {
         dt {
-            min-width: 8em;
+            min-width: @contacts-left-column;
             float: left;
             text-align: right;
         }
         dd {
-            margin: 0 0 0 9em;
+            margin: 0 0 0 (@contacts-left-column + .5em);
         }
     }
 }
