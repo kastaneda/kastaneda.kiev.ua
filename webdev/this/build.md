@@ -54,7 +54,7 @@ style.css: style.less
     вызывает скрипт какого-то такого вида:
 
 ```php
-<?php echo touch('/home/gray/git/homepage/_build') ? 'OK' : 'Error'
+<?php echo touch('/home/gray/git/homepage/_build') ? 'OK' : 'Error';
 ```
 
  4. У меня на билд-сервере периодически по crontab'у
