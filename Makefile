@@ -1,8 +1,8 @@
 # sudo apt-get install pandoc
-MARKDOWN = pandoc
+PANDOC = pandoc
 
 # sudo apt-get install node-less
-LESS = lessc
+LESSC = lessc
 
 SOURCE_PAGES = $(shell find . -type f -name '*.md')
 TARGET_PAGES = $(patsubst ./%.md,%.html,$(SOURCE_PAGES))
@@ -15,7 +15,7 @@ SPACE = $(NOOP) $(NOOP)
 all: $(TARGET_PAGES) sitemap.xml style/main.css
 
 %.html: %.md Makefile style/template.html
-	$(MARKDOWN) \
+	$(PANDOC) \
 	--from markdown \
 	--to html5 \
 	--standalone \
@@ -30,7 +30,7 @@ sitemap.xml: $(TARGET_PAGES) Makefile sitemap.sh
 	./sitemap.sh $(TARGET_PAGES) > sitemap.xml
 
 style/main.css: style/*.less Makefile
-	$(LESS) --compress style/main.less > $@
+	$(LESSC) --compress style/main.less > $@
 
 clean:
 	rm -f $(TARGET_PAGES) style/main.css sitemap.xml
