@@ -1,0 +1,25 @@
+
+.contacts {
+    margin: @line 0;
+    dt:after {
+        content: " —";
+    }
+    dd {
+        p:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+@media (min-width: 30em) {
+    .contacts {
+        dt {
+            min-width: 8em;
+            float: left;
+            text-align: right;
+        }
+        dd {
+            margin: 0 0 0 9em;
+        }
+    }
+}
