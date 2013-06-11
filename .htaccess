@@ -1,0 +1,6 @@
+
+AddDefaultCharset UTF-8
+
+RewriteEngine   on
+RewriteRule     ~gray/img/(.+)      http://bunker.org.ua/$0         [R,L]
+
