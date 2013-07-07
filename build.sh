@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # crontab:
-# */1  *  *  *  *  /home/gray/git/homepage/build.sh
+# */1  *  *  *  *  /home/gray/build/kastaneda.me/build.sh
 
 # webhook:
-# <?php echo touch('/home/gray/git/homepage/_build') ? 'OK' : 'Error';
+# <?php echo touch('/home/gray/build/kastaneda.me/_build') ? 'OK' : 'Error';
 
 FLAG_START=_build
 FLAG_LOCK=_build_lock
