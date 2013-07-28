@@ -2,5 +2,5 @@
 AddDefaultCharset UTF-8
 
 RewriteEngine   on
-RewriteRule     ~gray/img/(.+)      http://img.kastaneda.me/$0      [R,L]
+RewriteRule     ~gray/img/(.+)      http://img.kastaneda.kiev.ua/$0 [R,L]
 

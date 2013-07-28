@@ -7,7 +7,7 @@ LESSC = lessc
 SOURCE_PAGES = $(shell find . -type f -name '*.md')
 TARGET_PAGES = $(patsubst ./%.md,%.html,$(SOURCE_PAGES))
 
-HOSTING = kastaneda@rico:/var/www/kastaneda.me
+HOSTING = kastaneda@rico:/var/www/kastaneda.kiev.ua
 
 NOOP =
 SPACE = $(NOOP) $(NOOP)
