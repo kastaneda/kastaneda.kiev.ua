@@ -1,4 +1,5 @@
 *.html
+*.gz
 style/main.css
 _build*
 sitemap.xml

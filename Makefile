@@ -6,6 +6,7 @@ LESSC = lessc
 
 SOURCE_PAGES = $(shell find . -type f -name '*.md')
 TARGET_PAGES = $(patsubst ./%.md,%.html,$(SOURCE_PAGES))
+TARGET_GZ = $(patsubst ./%.md,%.html.gz,$(SOURCE_PAGES))
 
 HOSTING = kastaneda@rico:/var/www/kastaneda.kiev.ua
 
@@ -32,10 +33,15 @@ sitemap.xml: $(TARGET_PAGES) Makefile sitemap.sh
 style/main.css: style/*.less Makefile
 	$(LESSC) --compress style/main.less > $@
 
-clean:
-	rm -f $(TARGET_PAGES) style/main.css sitemap.xml
+gzip: $(TARGET_GZ) style/main.js.gz style/main.css.gz
 
-upload: all
+%.gz: %
+	gzip -9 $< -c > $@
+
+clean:
+	rm -f $(TARGET_PAGES) $(TARGET_GZ) style/main.css style/main.js.gz style/main.css.gz sitemap.xml
+
+upload: all gzip
 	rsync -av --delete --exclude-from=rsync_exclude . $(HOSTING)
 
-.PHONY: all clean upload
+.PHONY: all clean gzip upload
