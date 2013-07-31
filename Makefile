@@ -39,7 +39,9 @@ gzip: $(TARGET_GZ) style/main.js.gz style/main.css.gz
 	gzip -9 $< -c > $@
 
 clean:
-	rm -f $(TARGET_PAGES) $(TARGET_GZ) style/main.css style/main.js.gz style/main.css.gz sitemap.xml
+	find . -type f -name '*.html' | grep -v ./style/template.html | xargs rm -f
+	find . -type f -name '*.gz' -delete
+	rm -f style/main.css style/main.js.gz style/main.css.gz sitemap.xml
 
 upload: all gzip
 	rsync -av --delete --exclude-from=rsync_exclude . $(HOSTING)
