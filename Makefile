@@ -46,11 +46,10 @@ clean:
 pure: all gzip
 	find . -type f -name '*.html' | grep -v ./style/template.html | sort > _build_f_found
 	find . -type f -name '*.md' | sed 's/md$$/html/' | sort > _build_f_allow
-	grep -v -f _build_f_allow _build_f_found | xargs rm -f
 
-	find . -type f -name '*.html.gz' | sort > _build_f_found
-	find . -type f -name '*.md' | sed 's/md$$/html.gz/' | sort > _build_f_allow
-	grep -v -f _build_f_allow _build_f_found | xargs rm -f
+	find . -type f -name '*.html.gz' | sort >> _build_f_found
+	find . -type f -name '*.md' | sed 's/md$$/html.gz/' | sort >> _build_f_allow
+	diff _build_f_allow _build_f_found | grep '>' | awk '{ print $2 }' | xargs rm -f
 
 	rm _build_f_allow _build_f_found
 
