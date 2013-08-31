@@ -25,7 +25,18 @@ $endif$
 </head>
 <body>
 
+<article>
 $body$
+</article>
+
+$if(is-not-index)$
+<footer>
+    <nav>
+        <a href="$root-path$">На главную страницу</a>
+    </nav>
+    © Дмитрий Колесников
+</footer>
+$endif$
 
 </body>
 </html>
