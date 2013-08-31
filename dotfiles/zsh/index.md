@@ -1,3 +1,0 @@
-% Мой zshrc
-
-FIXME

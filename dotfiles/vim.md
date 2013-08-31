@@ -1,0 +1,3 @@
+% Мой ~/.vimrc
+
+FIXME

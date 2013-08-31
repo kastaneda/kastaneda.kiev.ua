@@ -1,16 +1,26 @@
 
 // поддержка подсветки синтаксиса, генерируемой Pandoc'ом
 
+pre.sourceCode, table.sourceCode {
+    @shadow: 0px 3px 12px @box-shadow-color;
+    -moz-box-shadow: @shadow;
+    -webkit-box-shadow: @shadow;
+    box-shadow: @shadow;
+}
+
 table.sourceCode {
     width: 100%;
+    pre {
+        margin: 0;
+    }
     &, tr.sourceCode, td.lineNumbers, td.sourceCode {
         vertical-align: baseline;
     }
     td.lineNumbers {
         text-align: right;
         padding: 0 4px;
-        color: #aaa;
-        border-right: 1px solid #aaa;
+        color: @box-shadow-color;
+        border-right: thin dotted @box-shadow-color;
     }
     td.sourceCode {
         padding: 0 0 0 5px;
