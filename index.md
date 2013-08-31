@@ -84,9 +84,8 @@
     - xdg-dirs, sshsf, ~/.bin/mnt
     - mpc + ncmpcpp + aumix + amixer
  * webdev
-    - [этот сайт]
+    - этот сайт
         * [как устроен сайт](webdev/this/source.html)
         * [система сборки](webdev/this/build.html)
  * misc
     - [привет Каганову!](misc/lleo.html)
-    - [тест](misc/test.html)
