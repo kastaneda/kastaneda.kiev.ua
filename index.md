@@ -87,7 +87,6 @@
     - [этот сайт]
         * [как устроен сайт](webdev/this/source.html)
         * [система сборки](webdev/this/build.html)
-        * [комменты](webdev/this/comments.html)
  * misc
     - [привет Каганову!](misc/lleo.html)
     - [тест](misc/test.html)
