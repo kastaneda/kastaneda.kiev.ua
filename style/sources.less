@@ -2,10 +2,14 @@
 // поддержка подсветки синтаксиса, генерируемой Pandoc'ом
 
 pre.sourceCode, table.sourceCode {
-    @shadow: 0px 3px 12px @box-shadow-color;
+    @shadow: 0px @grit-size (@grit-size*2.5) @box-shadow-color;
     -moz-box-shadow: @shadow;
     -webkit-box-shadow: @shadow;
     box-shadow: @shadow;
+
+    margin-left: -@grit-size;
+    margin-right: -@grit-size;
+    padding: 0 @grit-size;
 }
 
 table.sourceCode {
@@ -18,27 +22,27 @@ table.sourceCode {
     }
     td.lineNumbers {
         text-align: right;
-        padding: 0 4px;
+        padding: 0 @grit-size;
         color: @box-shadow-color;
         border-right: thin dotted @box-shadow-color;
     }
     td.sourceCode {
-        padding: 0 0 0 5px;
+        padding: 0 0 0 (@grit-size + 1px);
     }
 }
 
-
 code {
-    .kw { color: #007020; /* font-weight: bold; */ }        // FIXME
-    .dt { color: #902000; }
-    .dv { color: #40a070; }
-    .bn { color: #40a070; }
-    .fl { color: #40a070; }
-    .ch { color: #4070a0; }
-    .st { color: #4070a0; }
-    .co { color: #60a0b0; /* font-style: italic; */ }       // FIXME
-    .ot { color: #007020; }
-    .al { color: #ff0000; /* font-weight: bold; */ }        // FIXME
-    .fu { color: #06287e; }
-    .er { color: #ff0000; /* font-weight: bold; */ }        // FIXME
+          color: #444;
+    .kw { color: #a20; }    // Keyword
+    .dt { color: #280; }    // Data Type
+    .dv { color: #4a4; }    // Decimal Value
+    .bn { color: #4a4; }    // Base N
+    .fl { color: #4a4; }    // Float
+    .ch { color: #20a; }    // Char
+    .st { color: #20a; }    // String
+    .co { color: #aaa; }    // Comment
+    .ot { color: #606; }    // Other Token
+    .al { color: #000; }    // Alert Token
+    .fu { color: #366; }    // Function
+    .er { color: #000; }    // Error Token
 }
