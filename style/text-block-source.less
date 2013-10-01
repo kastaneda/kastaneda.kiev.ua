@@ -6,7 +6,8 @@ pre.sourceCode, table.sourceCode {
     -moz-box-shadow: @shadow;
     -webkit-box-shadow: @shadow;
     box-shadow: @shadow;
-    outline:thin dotted @box-shadow-color;
+    // https://bugzilla.mozilla.org/show_bug.cgi?id=480888
+    // outline: thin dotted @box-shadow-color;
 
     margin-left: -@grit-size;
     margin-right: -@grit-size;
