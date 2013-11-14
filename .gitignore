@@ -3,3 +3,5 @@
 style/main.css
 _build*
 sitemap.xml
+style/google-fonts.less
+style/*.ttf

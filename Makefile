@@ -35,8 +35,10 @@ sitemap.xml: $(TARGET_PAGES) Makefile sitemap.sh
 style/main.css: style/*.less style/google-fonts.less Makefile
 	$(LESSC) --compress style/main.less > $@
 
-style/google-fonts.less:
+style/google-fonts.less: Makefile
 	wget -O - $(GOOGLE_FONTS) > $@
+	cat $@ | grep -o 'http.*ttf' | xargs wget -c -P $(dir $@)
+	sed -i 's/http.*\///' $@
 
 gzip: $(TARGET_GZ) style/main.js.gz style/main.css.gz
 
@@ -46,6 +48,7 @@ gzip: $(TARGET_GZ) style/main.js.gz style/main.css.gz
 clean:
 	find . -type f -name '*.html' | grep -v ./style/template.html | xargs rm -f
 	find . -type f -name '*.gz' -delete
+	find . -type f -name '*.ttf' -delete
 	rm -f style/main.css style/main.js.gz style/main.css.gz style/google-fonts.less sitemap.xml
 
 fresh: all gzip
