@@ -1,19 +1,21 @@
 
 body {
-    font-family: 'Droid Sans', 'Liberation Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Droid Sans', 'Liberation Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 
 pre, code, tt {
-    font-family: 'Droid Sans Mono', 'Monaco', 'Lucida Console', monospace;
+    font-family: monospace;
 }
 
 @media (min-device-width: 1000px) {
-    // используем шрифты только на устройствах с большим экраном
+    // используем внешние шрифты только на устройствах с большим экраном
     // большинство браузеров не скачивают неиспользуемые шрифты
     // следовательно, low-end мобилки (с экранами меньше HD) не будут выкачивать всё это по GPRS
 
+    @import "google-fonts.less";
+
     body {
-        font-family: 'PT Sans', 'Droid Sans', 'Liberation Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: 'PT Sans', 'Droid Sans', 'Liberation Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
         font-weight: 400;
     }
 
@@ -23,7 +25,7 @@ pre, code, tt {
     }
 
     pre, code, tt {
-        font-family: 'PT Mono', 'Droid Sans Mono', 'Monaco', 'Lucida Console', monospace;
+        font-family: 'PT Mono', monospace;
         font-weight: 400;
     }
 }
