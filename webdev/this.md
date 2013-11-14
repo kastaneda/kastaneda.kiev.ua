@@ -106,10 +106,10 @@ style.css: style.less
  5. Сайт обновлён.
  6. Отчёт о сборке cron присылает мне на почту.
 
-[1]: https://github.com/kastaneda/homepage
+[1]: https://github.com/kastaneda/kastaneda.kiev.ua
 [2]: http://johnmacfarlane.net/pandoc/
 [3]: http://lesscss.org/
 [4]: http://en.wikipedia.org/wiki/Sitemaps
-[5]: https://github.com/kastaneda/homepage/blob/master/Makefile
+[5]: https://github.com/kastaneda/kastaneda.kiev.ua/blob/master/Makefile
 [6]: https://help.github.com/articles/post-receive-hooks
-[7]: https://github.com/kastaneda/homepage/blob/master/build.sh
+[7]: https://github.com/kastaneda/kastaneda.kiev.ua/blob/master/build.sh
