@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>$if(pagetitle)$$pagetitle$ ★ kastaneda.kiev.ua$else$kastaneda.kiev.ua$endif$</title>
+$if(is-index)$
+    <link rel="openid.server" href="http://www.myopenid.com/server/">
+    <link rel="openid.delegate" href="http://kastaneda.myopenid.com/">
+    <meta name="description" content="Дмитрий Колесников. Программист, веб-мастер, админ.">
+$endif$
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>/*<![CDATA[*/
+<?php echo preg_replace('=url\((img|fonts)/=', 'url(\$root-path\$style/$1/', file_get_contents(__DIR__ . '/main.css')); ?>
+    /*]]>*/</style>
+    <script>//<![CDATA[
+<?php echo file_get_contents(__DIR__ . '/main.js'); ?>
+    //]]></script>
+</head>
+<body>
+
+<article>
+$body$
+</article>
+
+$if(is-not-index)$
+<footer>
+    <nav>
+        <a href="$root-path$">На главную страницу</a>
+    </nav>
+    © Дмитрий Колесников
+</footer>
+$endif$
+
+</body>
+</html>

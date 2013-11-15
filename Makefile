@@ -4,6 +4,9 @@ PANDOC = pandoc
 # sudo apt-get install node-less
 LESSC = lessc
 
+# sudo apt-get install php5-cli
+PHP = php
+
 SOURCE_PAGES = $(shell find . -type f -name '*.md')
 TARGET_PAGES = $(patsubst ./%.md,%.html,$(SOURCE_PAGES))
 TARGET_GZ = $(patsubst ./%.md,%.html.gz,$(SOURCE_PAGES))
@@ -27,6 +30,9 @@ all: $(TARGET_PAGES) sitemap.xml style/main.css
 	$< \
 	--output $@
 
+style/template.html: style/template.phtml style/main.js style/main.css
+	$(PHP) $< > $@
+
 sitemap.xml: $(TARGET_PAGES) Makefile sitemap.sh
 	./sitemap.sh $(TARGET_PAGES) > sitemap.xml
 
@@ -40,7 +46,7 @@ gzip: $(TARGET_GZ) style/main.js.gz style/main.css.gz
 	gzip -9 $< -c > $@
 
 clean:
-	find . -type f -name '*.html' | grep -v ./style/template.html | xargs rm -f
+	find . -type f -name '*.html' | xargs rm -f
 	find . -type f -name '*.gz' -delete
 	rm -f style/main.css style/main.js.gz style/main.css.gz sitemap.xml
 	$(MAKE) -C style/fonts clean

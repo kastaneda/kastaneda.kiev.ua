@@ -1,6 +1,7 @@
 *.html
 *.gz
 style/main.css
+style/template.html
 _build*
 sitemap.xml
 style/fonts/google-fonts.css
