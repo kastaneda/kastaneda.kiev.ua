@@ -18,7 +18,7 @@ google-fonts.css: Makefile
 	wget -O $@ $(GOOGLE_FONTS)
 
 %.ttf: google-fonts.css
-	cat google-fonts.css | grep $* | grep -o 'http.*ttf' | xargs wget -O $@
+	cat google-fonts.css | grep $* | grep -o 'http.*ttf' | xargs wget --no-use-server-timestamps -O $@
 
 clean:
 	find . -type f -name '*.eot' -delete
