@@ -21,6 +21,9 @@ $endif$
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s).parentNode.insertBefore(my, s);
         })();
     </script>
+    $for(header-includes)$
+        $header-includes$
+    $endfor$
 </head>
 <body>
 
