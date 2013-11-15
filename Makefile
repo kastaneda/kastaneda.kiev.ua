@@ -40,15 +40,15 @@ style/main.css: style/*.less Makefile
 	$(MAKE) -C style/fonts
 	$(LESSC) --compress style/main.less > $@
 
-gzip: $(TARGET_GZ) style/main.js.gz style/main.css.gz
+gzip: $(TARGET_GZ)
 
 %.gz: %
 	gzip -9 $< -c > $@
 
 clean:
-	find . -type f -name '*.html' | xargs rm -f
-	find . -type f -name '*.gz' -delete
-	rm -f style/main.css style/main.js.gz style/main.css.gz sitemap.xml
+	find . -type f -name '*.html' -delete
+	find . -type f -name '*.html.gz' -delete
+	rm -f style/main.css sitemap.xml
 	$(MAKE) -C style/fonts clean
 
 fresh: all gzip
