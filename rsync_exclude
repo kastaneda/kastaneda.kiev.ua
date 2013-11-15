@@ -4,6 +4,9 @@
 style/*.less
 style/template.html
 Makefile
+style/fonts/Makefile
+style/fonts/google-fonts.css
+style/fonts/*.less
 rsync_exclude
 build.sh
 _build*

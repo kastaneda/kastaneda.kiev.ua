@@ -8,8 +8,6 @@ SOURCE_PAGES = $(shell find . -type f -name '*.md')
 TARGET_PAGES = $(patsubst ./%.md,%.html,$(SOURCE_PAGES))
 TARGET_GZ = $(patsubst ./%.md,%.html.gz,$(SOURCE_PAGES))
 
-GOOGLE_FONTS = "http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|PT+Mono|Open+Sans+Condensed:300&subset=latin,cyrillic"
-
 HOSTING = kastaneda@rico:/var/www/kastaneda.kiev.ua
 
 NOOP =
@@ -32,13 +30,9 @@ all: $(TARGET_PAGES) sitemap.xml style/main.css
 sitemap.xml: $(TARGET_PAGES) Makefile sitemap.sh
 	./sitemap.sh $(TARGET_PAGES) > sitemap.xml
 
-style/main.css: style/*.less style/google-fonts.less Makefile
+style/main.css: style/*.less Makefile
+	$(MAKE) -C style/fonts
 	$(LESSC) --compress style/main.less > $@
-
-style/google-fonts.less: Makefile
-	wget -O - $(GOOGLE_FONTS) > $@
-	cat $@ | grep -o 'http.*ttf' | xargs wget -c -P $(dir $@)
-	sed -i 's/http.*\///' $@
 
 gzip: $(TARGET_GZ) style/main.js.gz style/main.css.gz
 
@@ -48,8 +42,8 @@ gzip: $(TARGET_GZ) style/main.js.gz style/main.css.gz
 clean:
 	find . -type f -name '*.html' | grep -v ./style/template.html | xargs rm -f
 	find . -type f -name '*.gz' -delete
-	find . -type f -name '*.ttf' -delete
-	rm -f style/main.css style/main.js.gz style/main.css.gz style/google-fonts.less sitemap.xml
+	rm -f style/main.css style/main.js.gz style/main.css.gz sitemap.xml
+	$(MAKE) -C style/fonts clean
 
 fresh: all gzip
 	find . -type f -name '*.html' | grep -v ./style/template.html | sort > _build_f_found

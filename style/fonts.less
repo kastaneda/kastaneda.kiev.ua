@@ -1,31 +1,65 @@
 
 body {
-    font-family: 'Droid Sans', 'Liberation Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'PT Sans', 'Droid Sans', 'Liberation Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3 {
+    font-family: 'Open Sans Condensed', 'Arial Narrow', sans-serif;
+    font-weight: 300;
 }
 
 pre, code, tt {
-    font-family: monospace;
+    font-family: 'PT Mono', monospace;
+    font-weight: 400;
 }
 
-@media (min-device-width: 1000px) {
-    // используем внешние шрифты только на устройствах с большим экраном
-    // большинство браузеров не скачивают неиспользуемые шрифты
-    // следовательно, low-end мобилки (с экранами меньше HD) не будут выкачивать всё это по GPRS
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/PTSans-Regular.eot);
+    src: local('PT Sans'),
+         local('PTSans-Regular'),
+         url(fonts/PTSans-Regular.ttf) format('truetype');
+}
 
-    @import "google-fonts.less";
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url(fonts/PTSans-Bold.eot);
+    src: local('PT Sans Bold'),
+         local('PTSans-Bold'),
+         url(fonts/PTSans-Bold.ttf) format('truetype');
+}
 
-    body {
-        font-family: 'PT Sans', 'Droid Sans', 'Liberation Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-        font-weight: 400;
-    }
+@font-face {
+    font-family: 'PT Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url(fonts/PTSans-Italic.eot);
+    src: local('PT Sans Italic'),
+         local('PTSans-Italic'),
+         url(fonts/PTSans-Italic.ttf) format('truetype');
+}
 
-    h1, h2, h3 {
-        font-family: 'Open Sans Condensed', 'Arial Narrow', sans-serif;
-        font-weight: 300;
-    }
+@font-face {
+    font-family: 'Open Sans Condensed';
+    font-style: normal;
+    font-weight: 300;
+    src: url(fonts/OpenSans-CondensedLight.eot);
+    src: local('Open Sans Cond Light'),
+         local('OpenSans-CondensedLight'),
+         url(fonts/OpenSans-CondensedLight.ttf) format('truetype');
+}
 
-    pre, code, tt {
-        font-family: 'PT Mono', monospace;
-        font-weight: 400;
-    }
+@font-face {
+    font-family: 'PT Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/PTMono-Regular.eot);
+    src: local('PT Mono'),
+         local('PTMono-Regular'),
+         url(fonts/PTMono-Regular.ttf) format('truetype');
 }
