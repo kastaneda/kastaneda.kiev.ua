@@ -14,7 +14,7 @@ all: $(FONTS_TTF) $(FONTS_EOT)
 %.eot: %.ttf
 	$(MKEOT) $< http://kastaneda.kiev.ua http://kastaneda.me > $@
 
-google-fonts.css: Makefile
+google-fonts.css:
 	wget -O $@ $(GOOGLE_FONTS)
 
 %.ttf: google-fonts.css
@@ -25,4 +25,4 @@ clean:
 	find . -type f -name '*.ttf' -delete
 	rm -f google-fonts.css
 
-.PHONY: clean
+.PHONY: all clean
