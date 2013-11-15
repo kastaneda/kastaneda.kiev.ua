@@ -12,7 +12,7 @@ FONTS_EOT = $(patsubst %,%.eot,$(FONTS))
 all: $(FONTS_TTF) $(FONTS_EOT)
 
 %.eot: %.ttf
-	$(MKEOT) $< > $@
+	$(MKEOT) $< http://kastaneda.kiev.ua http://kastaneda.me > $@
 
 google-fonts.css: Makefile
 	wget -O $@ $(GOOGLE_FONTS)
