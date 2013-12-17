@@ -5,7 +5,7 @@ echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
 
 for FILE in "$@"
 do
-  LASTMOD=`date --iso-8601=seconds --utc --reference="$FILE"`
+  LASTMOD=`date "+%FT%T%:z" --reference="$FILE"`
   URL=`echo "http://kastaneda.kiev.ua/$FILE" | sed s/index.html$//`
   echo '  <url>'
   echo "    <loc>$URL</loc>"
