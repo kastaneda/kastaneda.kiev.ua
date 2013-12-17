@@ -2,9 +2,9 @@
 # sudo apt-get install eot-utils
 MKEOT = mkeot
 
-FONTS = PTSans-Regular PTSans-Bold PTSans-Italic OpenSans-CondensedLight PTMono-Regular
+FONTS = OpenSans-CondensedLight PTMono-Regular
 
-GOOGLE_FONTS = "http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|PT+Mono|Open+Sans+Condensed:300&subset=latin,cyrillic"
+GOOGLE_FONTS = "http://fonts.googleapis.com/css?family=PT+Mono|Open+Sans+Condensed:300&subset=latin,cyrillic"
 
 FONTS_TTF = $(patsubst %,%.ttf,$(FONTS))
 FONTS_EOT = $(patsubst %,%.eot,$(FONTS))
