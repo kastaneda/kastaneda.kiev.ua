@@ -16,16 +16,17 @@ a {
         color: @link-hover-color;
     }
     &:visited {
-        color: @visited-color;
+        color: @link-visited-color;
         text-decoration: underline;
         &:hover {
-            color: @visited-hover-color;
+            color: @link-visited-hover-color;
         }
     }
     &:active, &:visited:active {
-        color: @active-color;
+        color: @link-active-color;
     }
     &:focus {
+        background: @link-focus-background-color;
         outline: thin dotted;
     }
 }
