@@ -16,7 +16,7 @@ HOSTING = kastaneda@rico:/var/www/kastaneda.kiev.ua
 NOOP =
 SPACE = $(NOOP) $(NOOP)
 
-all: $(TARGET_PAGES) sitemap.xml style/main.css
+all: $(TARGET_PAGES) sitemap.xml
 
 %.html: %.md Makefile style/template.html
 	$(PANDOC) \
