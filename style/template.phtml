@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <title>$if(pagetitle)$$pagetitle$ ★ kastaneda.kiev.ua$else$kastaneda.kiev.ua$endif$</title>
 $if(is-index)$
-    <link rel="openid2.provider" href="https://www.google.com/accounts/o8/ud?source=profiles">
-    <link rel="openid2.local_id" href="https://profiles.google.com/101700868630803601700">
+    <link rel="openid.server" href="http://www.dreamwidth.org/openid/server.bml">
+    <link rel="openid.delegate" href="http://kastaneda.dreamwidth.org/"> 
+    <link rel="openid2.provider" href="http://www.dreamwidth.org/openid/server.bml">
+    <link rel="openid2.local_id" href="http://kastaneda.dreamwidth.org/">
     <meta name="description" content="Дмитрий Колесников. Программист, веб-мастер, админ.">
 $endif$
     <meta name="viewport" content="width=device-width, initial-scale=1">
