@@ -61,6 +61,7 @@ fresh: all gzip
 
 upload: all gzip fresh
 	sudo rm /etc/nologin
+	# Damn. Again.
 	rsync -av --delete --exclude-from=rsync_exclude . $(HOSTING)
 
 .PHONY: all clean gzip fresh upload
