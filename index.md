@@ -99,6 +99,7 @@
         * хоткеи
         * меню
     - xdg-dirs, sshsf, ~/.bin/mnt
+    - screen
     - mpc + ncmpcpp + aumix + amixer
  * webdev
     - [про этот сайт](webdev/this.html)
