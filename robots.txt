@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-Host: kastaneda.kiev.ua
-Sitemap: http://kastaneda.kiev.ua/sitemap.xml

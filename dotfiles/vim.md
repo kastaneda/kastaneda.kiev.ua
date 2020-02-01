@@ -1,3 +1,5 @@
-% Мой ~/.vimrc
+---
+title: Мой ~/.vimrc
+---
 
 FIXME
