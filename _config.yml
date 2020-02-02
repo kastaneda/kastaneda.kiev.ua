@@ -1,7 +1,15 @@
 ---
+title: kastaneda.kiev.ua
+description: ''
+
+timezone: Europe/Kiev
+url: http://kastaneda.local
+baseurl: /_site
+
 defaults:
   - scope:
       path: ''
     values:
       layout: page
 
+highlighter: rouge
