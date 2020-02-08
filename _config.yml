@@ -6,6 +6,12 @@ timezone: Europe/Kiev
 url: http://kastaneda.local
 baseurl: /_site
 
+exclude:
+  - Makefile
+  - README
+  - kastaneda.kiev.ua.tar.gz
+  - build.sh
+
 defaults:
   - scope:
       path: ''
