@@ -1,0 +1,30 @@
+// поддержка подсветки синтаксиса, генерируемой Pandoc'ом
+// FIXME TODO migrate to Jekyll
+
+pre.sourceCode, table.sourceCode
+  $shadow: 0px $grit-size ($grit-size*2.5) $box-shadow-color
+  -moz-box-shadow: $shadow
+  -webkit-box-shadow: $shadow
+  box-shadow: $shadow
+  // https://bugzilla.mozilla.org/show_bug.cgi?id=480888
+  // outline: thin dotted $box-shadow-color;
+
+  margin-left: -$grit-size
+  margin-right: -$grit-size
+  padding: 0 $grit-size
+
+table.sourceCode
+  width: 100%
+  pre
+    margin: 0
+  &, tr.sourceCode, td.lineNumbers, td.sourceCode
+    vertical-align: baseline
+  td.lineNumbers
+    text-align: right
+    padding: 0 $grit-size
+    color: $box-shadow-color
+    border-right: thin dotted $box-shadow-color
+  td.sourceCode
+    padding: 0 0 0 ($grit-size + 1px)
+
+@import "syntax-highlighting.scss"

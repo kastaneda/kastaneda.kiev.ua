@@ -1,0 +1,46 @@
+---
+layout: null
+sitemap: false
+---
+
+@import "reset.sass"
+
+////////////////////////////////////////////////////////////////////////
+
+$background-color: #fff         // основной фон
+$text-color: #000               // основной текст
+
+$muted-color: #666              // приглушённый цвет текста
+$header-color: #066             // цвет текста h1, h2, h3
+$selection-color: #ff9          // фон выделения текста
+$box-shadow-color: #ccc         // тень вокруг блоков
+
+$link-color: #009               // все ссылки
+$link-visited-color: #609
+$link-active-color: #c33
+$link-focus-background-color: #ff9
+$link-hover-color: $link-color + #333
+$link-visited-hover-color: $link-visited-color + #333
+
+$line: 24px                     // высота строки
+$font-size: 16px                // размер основного текста
+
+$font-h1-size: 48px
+$font-h2-size: 36px
+$font-h3-size: 28px             // высота строки вычисляется кратной $line
+
+$grit-size: 4px
+
+// «полосатый» фон есть для строк высотой 18, 20, 22 и 24px
+$debug-background: "/_site/style/img/line-height-" + $line + ".png"
+
+////////////////////////////////////////////////////////////////////////
+
+@import "body.sass"
+@import "fonts.sass"
+@import "text-blocks.sass"
+@import "text-block-contacts.sass"
+@import "text-block-footer.sass"
+@import "text-inline.sass"
+@import "text-block-source.sass"
+@import "misc.sass"

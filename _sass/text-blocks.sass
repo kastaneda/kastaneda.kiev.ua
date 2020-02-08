@@ -1,0 +1,40 @@
+h1, h2, h3
+  color: $header-color
+
+p, ul, ol, pre
+  margin: $line 0
+
+pre
+  overflow: auto
+
+li
+  margin: 0 0 0 2em
+  ul, ol
+    margin: 0
+
+ul
+  list-style-type: disc
+  ul
+    list-style-type: circle
+    ul
+      list-style-type: none
+      li:before
+        display: inline-block
+        width: 1em
+        margin: 0 0 0 -1em
+        content: "— "
+
+h1, h2, h3
+  margin: $line 0
+
+h1
+  font-size: $font-h1-size
+  line-height: ceil(($font-h1-size + $grit-size) / $line) * $line
+
+h2
+  font-size: $font-h2-size
+  line-height: ceil(($font-h2-size + $grit-size) / $line) * $line
+
+h3
+  font-size: $font-h3-size
+  line-height: ceil(($font-h3-size + $grit-size) / $line) * $line

@@ -1,0 +1,17 @@
+dl
+  margin: $line 0
+  dt:after
+    content: " —"
+  dd
+    p:first-child
+      margin-top: 0
+
+@media (min-width: 30em)
+  $contacts-left-column: 8em
+  dl
+    dt
+      min-width: $contacts-left-column
+      float: left
+      text-align: right
+    dd
+      margin: 0 0 0 ($contacts-left-column + .5em)
