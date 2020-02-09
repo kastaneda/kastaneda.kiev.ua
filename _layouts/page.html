@@ -11,7 +11,9 @@
     <meta name="description" content="Дмитрий Колесников. Программист, веб-мастер, админ.">
 {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ '/style/main.css' | prepend: site.baseurl }}">
+    <style>
+{{ '@import "main"' | sassify | remove_first: '@charset "UTF-8";' }} 
+    </style>
     <script src="{{ '/style/main.js' | prepend: site.baseurl }}"></script>
   </head>
   <body>
