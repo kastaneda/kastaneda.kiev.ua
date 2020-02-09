@@ -3,8 +3,8 @@ title: kastaneda.kiev.ua
 description: ''
 
 timezone: Europe/Kiev
-url: http://kastaneda.local
-baseurl: /_site
+url: https://kastaneda.kiev.ua/
+baseurl: ''
 
 exclude:
   - Makefile
