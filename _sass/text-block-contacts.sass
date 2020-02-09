@@ -3,8 +3,9 @@ dl
   dt:after
     content: " —"
   dd
-    p:first-child
-      margin-top: 0
+    margin: $line 0
+  dt+dd
+    margin-top: 0
 
 @media (min-width: 30em)
   $contacts-left-column: 8em
@@ -14,4 +15,4 @@ dl
       float: left
       text-align: right
     dd
-      margin: 0 0 0 ($contacts-left-column + .5em)
+      margin-left: ($contacts-left-column + .75em)
