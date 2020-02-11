@@ -18,4 +18,12 @@ defaults:
     values:
       layout: page
 
+collections:
+  posts:
+    title: Posts
+    output: true
+#  uploads:
+#    title: Uploads
+#    output: true
+
 highlighter: rouge
