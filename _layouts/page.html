@@ -14,7 +14,6 @@
     <style>
 {{ '@import "main"' | sassify | remove_first: '@charset "UTF-8";' }} 
     </style>
-    <script src="{{ '/style/main.js' | prepend: site.baseurl }}"></script>
   </head>
   <body>
 
@@ -30,6 +29,11 @@
       © Дмитрий Колесников
     </footer>
 {% endif %}
+
+
+<script>
+{% include main.js %}
+</script>
 
   </body>
 </html>
