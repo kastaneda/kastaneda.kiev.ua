@@ -1,5 +1,5 @@
 ---
-title: kastaneda.kiev.ua
+title: дон Карлос
 description: ''
 
 timezone: Europe/Kiev
@@ -16,14 +16,15 @@ defaults:
   - scope:
       path: ''
     values:
-      layout: page
+      layout: FIXME-page
+  - scope:
+      type: posts
+    values:
+      layout: FIXME-page
 
 collections:
   posts:
     title: Posts
     output: true
-#  uploads:
-#    title: Uploads
-#    output: true
 
 highlighter: rouge
