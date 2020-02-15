@@ -1,0 +1,13 @@
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }} ★ kastaneda.kiev.ua{% else %}kastaneda.kiev.ua{% endif %}</title>
+{% if page.url == '/' %}
+    <link rel="openid.server" href="http://www.dreamwidth.org/openid/server.bml">
+    <link rel="openid.delegate" href="http://kastaneda.dreamwidth.org/">
+    <link rel="openid2.provider" href="http://www.dreamwidth.org/openid/server.bml">
+    <link rel="openid2.local_id" href="http://kastaneda.dreamwidth.org/">
+    <meta name="description" content="Дмитрий Колесников. Программист, веб-мастер, админ.">
+{% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+{{ '@import "main"' | sassify | remove_first: '@charset "UTF-8";' }} 
+    </style>
