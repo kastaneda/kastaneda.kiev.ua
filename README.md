@@ -38,3 +38,18 @@ Personal homepage
 Пожалуй, с CSS и JS на данный момент всё относительно хорошо.
 То есть ещё не идеально, но уже можно не париться.
 Лучше заняться контентом.
+
+
+Синхронизация с Dreamwidth
+--------------------------
+
+Думаю о механизме автоматической публикации и автоматического обновления
+копий моих постов в Dreamwidth.
+
+Также мне потребуется действенный механизм для обновления mtime постов,
+ну и придётся где-то хранить информацию о том, что уже синхронизировано.
+Вероятно, это всё стоит писать на PHP.
+
+ - https://wiki.dreamwidth.net/wiki/index.php/Dreamwidth_API
+ - https://www.livejournal.com/doc/server/ljp.csp.flat.postevent.html
+ - https://www.livejournal.com/doc/server/ljp.csp.flat.editevent.html
