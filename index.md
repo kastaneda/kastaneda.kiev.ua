@@ -41,6 +41,7 @@
     - screen
     - mpc + ncmpcpp + aumix + amixer
 
+
 «Как бы блог»
 -------------
 

@@ -12,7 +12,7 @@
 {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-{{ '@import "main"' | sassify | remove_first: '@charset "UTF-8";' }} 
+{{ '@import "main"' | sassify | remove_first: '@charset "UTF-8";' }}
     </style>
   </head>
   <body>
@@ -21,14 +21,15 @@
 {{ content }}
     </article>
 
-{% if page.url != '/' %}
     <footer>
       <nav>
-        <a href="{{ '/' | prepend: site.baseurl }}">На главную страницу</a>
+{% if page.url != '/' %}
+        <a href="{{ '/' | prepend: site.baseurl }}">На главную страницу</a> |
+{% endif %}
+        <a href="https://github.com/kastaneda/kastaneda.kiev.ua/blob/master/{{ page.path }}">Исходный код</a>
       </nav>
       © Дмитрий Колесников
     </footer>
-{% endif %}
 
 
 <script>
