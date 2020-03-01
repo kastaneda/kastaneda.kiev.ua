@@ -53,3 +53,9 @@ Personal homepage
  - https://wiki.dreamwidth.net/wiki/index.php/Dreamwidth_API
  - https://www.livejournal.com/doc/server/ljp.csp.flat.postevent.html
  - https://www.livejournal.com/doc/server/ljp.csp.flat.editevent.html
+
+```json
+{"last_sync_date":1583099313}
+```
+
+ - update mtime?
