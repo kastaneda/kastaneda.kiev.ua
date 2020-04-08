@@ -1,0 +1,15 @@
+---
+layout: FIXME-page
+---
+
+<h1>{{ page.title }}</h1>
+
+<p class="FIXME" style="color: #666">
+    {{ page.date }}
+    {% if page.dreamwidth_itemid %}
+        <br />
+        Cross-post: <a class="FIXME" style="color: inherit" href="https://kastaneda.dreamwidth.org/{{ page.dreamwidth_itemid }}.html">https://kastaneda.dreamwidth.org/{{ page.dreamwidth_itemid }}.html</a>
+    {% endif %}
+</p>
+
+{{ content }}

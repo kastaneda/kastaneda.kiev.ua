@@ -20,7 +20,7 @@ defaults:
   - scope:
       type: posts
     values:
-      layout: FIXME-page
+      layout: FIXME-post
 
 collections:
   posts:
