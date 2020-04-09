@@ -29,7 +29,7 @@
     - [мои места обитания в сети](about/links.html)
     - GnuPG public key
     - про копирайты на все тексты сайта
- * dotfiles
+ * [dotfiles](https://bitbucket.org/evilgrass/dotfiles)
     - домашний каталог в svn
     - zshrc
     - vimrc
