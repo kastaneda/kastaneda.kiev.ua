@@ -8,5 +8,14 @@ build:
 upload:
 	rsync -av --delete _site/ $(HOSTING)
 
+post_clone:
+	git ls-files | xargs  -I '{}' git log -1 --pretty=format:"%cI {} %n" {} | xargs -n2 touch -d
 
-.PHONY: build
+save_mtime:
+	for f in `git diff --name-only | grep \.md$$`; do \
+	  d=`date "+%F %X %z" -r $$f`; \
+	  echo sed "s/^mtime:.*$/mtime: $$d/" -i $$f; \
+	  echo touch -d "$$d" $$f; \
+	done
+
+.PHONY: build post_clone save_mtime
