@@ -10,6 +10,10 @@ layout: FIXME-page
         <br />
         Cross-post: <a class="FIXME" style="color: inherit" href="https://kastaneda.dreamwidth.org/{{ page.dreamwidth_itemid }}.html">https://kastaneda.dreamwidth.org/{{ page.dreamwidth_itemid }}.html</a>
     {% endif %}
+    {% for link in page.crossposts %}
+        <br />
+        Cross-post: <a class="FIXME" style="color: inherit" href="{{ link }}">{{ link }}</a>
+    {% endfor %}
 </p>
 
 {{ content }}
