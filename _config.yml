@@ -27,4 +27,7 @@ collections:
     title: Posts
     output: true
 
+sass:
+  style: compressed
+
 highlighter: rouge
