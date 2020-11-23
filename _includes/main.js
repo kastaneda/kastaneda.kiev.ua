@@ -1,10 +1,13 @@
 (function () {
     var debugHighlightChecker = function () {
-        var className = window.getSelection().isCollapsed ? '' : 'debug';
-        document.getElementsByTagName('body')[0].className = className;
+        var className = 'debug';
+        var body = document.getElementsByClassName('body')[0];
 
-        // why not...?
-        // document.querySelector('body').classList.toggle('debug', !window.getSelection().isCollapsed);
+        if (window.getSelection().isCollapsed) {
+            body.classList.remove(className);
+        } else {
+            body.classList.add(className);
+        }
     };
 
     var debugHighlightHandler = function() {
