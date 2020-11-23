@@ -2,13 +2,13 @@
     var debugHighlightChecker = function () {
         var className = window.getSelection().isCollapsed ? '' : 'debug';
         document.getElementsByTagName('body')[0].className = className;
+
+        // why not...?
+        // document.querySelector('body').classList.toggle('debug', !window.getSelection().isCollapsed);
     };
 
     var debugHighlightHandler = function() {
         debugHighlightChecker();
-
-        // если одиночный щелчок мышью пришёлся по выделению, то
-        // событие может прийти раньше, чем выделение снимается
         window.setTimeout(debugHighlightChecker, 100);
     };
 
