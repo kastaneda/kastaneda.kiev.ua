@@ -1,7 +1,7 @@
 (function () {
     var debugHighlightChecker = function () {
         var className = 'debug';
-        var body = document.getElementsByClassName('body')[0];
+        var body = document.getElementsByTagName('body')[0];
 
         if (window.getSelection().isCollapsed) {
             body.classList.remove(className);
