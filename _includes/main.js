@@ -1,6 +1,6 @@
 (function () {
     var debugHighlightChecker = function () {
-        var className = 'debug';
+        var className = 'js-selection';
         var body = document.getElementsByTagName('body')[0];
 
         if (window.getSelection().isCollapsed) {
