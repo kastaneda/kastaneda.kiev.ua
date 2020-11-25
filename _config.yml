@@ -1,6 +1,6 @@
 ---
-title: дон Карлос
-description: ''
+title: kastaneda.kiev.ua
+description: Дмитрий Колесников. Программист, веб-мастер, админ.
 
 timezone: Europe/Kiev
 url: https://kastaneda.kiev.ua
@@ -16,11 +16,11 @@ defaults:
   - scope:
       path: ''
     values:
-      layout: FIXME-page
+      layout: page
   - scope:
       type: posts
     values:
-      layout: FIXME-post
+      layout: post
 
 collections:
   posts:
