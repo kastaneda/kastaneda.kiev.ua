@@ -2,28 +2,23 @@
 layout: base
 ---
 
-<main>
-  <article>
+    <main>
+      <article>
+        <header>
+          <h1>{{ page.title }}</h1>
+        </header>
+        <ul class="FIXME" style="color: #666">
+          <li>{{ page.date }}</li>
+    {%- if page.dreamwidth_itemid %}
+          <li>Cross-post: <a class="FIXME" style="color: inherit" href="https://kastaneda.dreamwidth.org/{{ page.dreamwidth_itemid }}.html">https://kastaneda.dreamwidth.org/{{ page.dreamwidth_itemid }}.html</a></li>
+    {%- endif %}
+    {%- for link in page.crossposts %}
+          <li>Cross-post: <a class="FIXME" style="color: inherit" href="{{ link }}">{{ link }}</a></li>
+    {%- endfor %}
+        </ul>
 
-    <header>
-      <h1>{{ page.title }}</h1>
-    </header>
+{{ content }}
 
-    <p class="FIXME" style="color: #666">
-      {{ page.date }}
-      {% if page.dreamwidth_itemid %}
-        <br />
-        Cross-post: <a class="FIXME" style="color: inherit" href="https://kastaneda.dreamwidth.org/{{ page.dreamwidth_itemid }}.html">https://kastaneda.dreamwidth.org/{{ page.dreamwidth_itemid }}.html</a>
-      {% endif %}
-      {% for link in page.crossposts %}
-         <br />
-         Cross-post: <a class="FIXME" style="color: inherit" href="{{ link }}">{{ link }}</a>
-      {% endfor %}
-    </p>
-
-    {{ content }}
-
-  </article>
-</main>
-
-{% include page-footer.html %}
+      </article>
+    </main>
+{%- include page-footer.html %}

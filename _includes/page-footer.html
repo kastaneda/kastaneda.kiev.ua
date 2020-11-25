@@ -1,9 +1,9 @@
-<footer>
-  <nav>
-{% if page.url != '/' %}
-    <a href="{{ '/' | prepend: site.baseurl }}">На главную страницу</a> |
-{% endif %}
-    <a href="https://github.com/kastaneda/kastaneda.kiev.ua/blob/master/{{ page.path }}">Исходный код</a>
-  </nav>
-  © Дмитрий Колесников
-</footer>
+    <footer>
+      <nav>
+{%- if page.url != '/' %}
+        <a href="{{ '/' | prepend: site.baseurl }}">На главную страницу</a> |
+{%- endif %}
+        <a href="https://github.com/kastaneda/kastaneda.kiev.ua/blob/master/{{ page.path }}">Исходный код</a>
+      </nav>
+      © Дмитрий Колесников
+    </footer>
