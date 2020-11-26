@@ -9,8 +9,11 @@ layout: base
         </header>
         <ul class="FIXME" style="color: #666">
           <li>{{ page.date }}</li>
-    {%- if page.dreamwidth_itemid %}
-          <li>Cross-post: <a class="FIXME" style="color: inherit" href="https://kastaneda.dreamwidth.org/{{ page.dreamwidth_itemid }}.html">https://kastaneda.dreamwidth.org/{{ page.dreamwidth_itemid }}.html</a></li>
+    {%- if page.dreamwidth %}
+          <li>Cross-post: <a class="FIXME" style="color: inherit" href="https://kastaneda.dreamwidth.org/{{ page.dreamwidth_itemid }}.html">https://kastaneda.dreamwidth.org/{{ page.dreamwidth }}.html</a></li>
+    {%- endif %}
+    {%- if page.livejournal %}
+          <li>Cross-post: <a class="FIXME" style="color: inherit" href="https://kastaneda.livejournal.com/{{ page.dreamwidth_itemid }}.html">https://kastaneda.dreamwidth.org/{{ page.livejournal }}.html</a></li>
     {%- endif %}
     {%- for link in page.crossposts %}
           <li>Cross-post: <a class="FIXME" style="color: inherit" href="{{ link }}">{{ link }}</a></li>
