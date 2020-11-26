@@ -9,6 +9,15 @@
     <meta name="description" content="Дмитрий Колесников. Программист, веб-мастер, админ.">
 {%- endif %}
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+{%- if page.dreamwidth %}
+    <link rel="alternate" href="https://kastaneda.dreamwidth.org/{{ page.dreamwidth }}.html">
+{%- endif %}
+{%- if page.livejournal %}
+    <link rel="alternate" href="https://kastaneda.livejournal.com/{{ page.livejournal }}.html">
+{%- endif %}
+{%- for link in page.crossposts %}
+    <link rel="alternate" href="{{ link }}">
+{%- endfor %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
 {{ '@import "main"' | sassify | remove_first: '@charset "UTF-8";' | strip }} 
