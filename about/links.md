@@ -1,5 +1,5 @@
 ---
-title: Места места обитания в сети
+title: Мои места обитания в сети
 ---
 
 [LiveJournal](https://kastaneda.livejournal.com/)
