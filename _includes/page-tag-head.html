@@ -1,5 +1,6 @@
     <meta charset="utf-8">
-    <title>{% if page.title %}{{ page.title }} ★ {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title }} ★ {{ site.title }}
+           {%- else %}{{ site.title }}{% endif %}</title>
 {%- if page.url == '/' %}
     <link rel="openid.server" href="https://www.dreamwidth.org/openid/server.bml">
     <link rel="openid.delegate" href="https://kastaneda.dreamwidth.org/">
