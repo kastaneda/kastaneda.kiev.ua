@@ -50,10 +50,10 @@ Personal homepage
 ну и придётся где-то хранить информацию о том, что уже синхронизировано.
 Вероятно, это всё стоит писать на PHP.
 
- - https://wiki.dreamwidth.net/wiki/index.php/Dreamwidth_API
- - https://www.livejournal.com/doc/server/ljp.csp.flat.postevent.html
- - https://www.livejournal.com/doc/server/ljp.csp.flat.editevent.html
- - https://www.dreamwidth.org/support/faqbrowse?faqid=175
+ - <https://wiki.dreamwidth.net/wiki/index.php/Dreamwidth_API>
+ - <https://www.livejournal.com/doc/server/ljp.csp.flat.postevent.html>
+ - <https://www.livejournal.com/doc/server/ljp.csp.flat.editevent.html>
+ - <https://www.dreamwidth.org/support/faqbrowse?faqid=175>
 
 ```json
 {"last_sync_date":1583099313}
