@@ -1,6 +1,10 @@
 ---
 title: The end of Chromium
 date: 2021-02-18 07:07:00 +0200
+dreamwidth: 558067
+crossposts:
+ - https://test.de.co.ua/2021/02/18/chromium-end.html
+ - https://netassist.social/posts/34
 ---
 
 Я багато років користувався Chrome та Chromium на всіх своїх ноутбуках та смартфонах. Причому на ноутбуках використовую виключно Chromium, а не Chrome. [Різницю між Chromium та Chrome][1] я знаю добре, і використання Chrome для мене є неприпустимим.
