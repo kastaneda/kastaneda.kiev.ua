@@ -2,7 +2,15 @@ HOSTING = kastaneda@rico:/var/www/kastaneda.kiev.ua
 
 build:
 	jekyll build
-	find _site -regex '.*\.\(html\|xml\|txt\|ico\)$$' | xargs gzip -k9
+
+draft:
+	jekyll build -D
+
+compress:
+	find _site -regex '.*\.\(html\|xml\|ico\)$$' | xargs zopfli --i50
+	find _site -regex '.*\.\(html\|xml\|ico\)$$' | xargs brotli -Z
+
+package:
 	tar zcf kastaneda.kiev.ua.tar.gz -C _site/ .
 
 upload:
@@ -18,4 +26,4 @@ save_mtime:
 	  touch -d "$$d" $$f; \
 	done
 
-.PHONY: build post_clone save_mtime
+.PHONY: build draft compress package post_clone save_mtime
