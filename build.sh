@@ -18,7 +18,8 @@ then
     touch $FLAG_LOCK
     rm $FLAG_START
     git pull && \
-        make && \
+        make build && \
+        make compress && \
         make upload && \
         rm $FLAG_LOCK
   fi
