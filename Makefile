@@ -1,17 +1,22 @@
 HOSTING = kastaneda@rico:/var/www/kastaneda.kiev.ua
 
-build:
+build: clean
 	jekyll build
 
-draft:
+draft: clean
 	jekyll build -D
 
 compress:
-	find _site -regex '.*\.\(html\|xml\|ico\)$$' | xargs zopfli --i50
-	find _site -regex '.*\.\(html\|xml\|ico\)$$' | xargs brotli -Z
+	find _site -regex '.*\.\(html\|xml\|ico\)$$' | xargs zopfli --i20
+	find _site -regex '.*\.\(html\|xml\|ico\)$$' | xargs brotli -fZ
 
-package:
-	tar zcf kastaneda.kiev.ua.tar.gz -C _site/ .
+package: kastaneda.kiev.ua.tar.gz
+
+kastaneda.kiev.ua.tar.gz:
+	tar zcf $@ -C _site/ .
+
+clean:
+	rm -f kastaneda.kiev.ua.tar.gz
 
 upload:
 	rsync -av --delete _site/ $(HOSTING)
