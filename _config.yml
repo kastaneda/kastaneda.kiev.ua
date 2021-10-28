@@ -1,10 +1,10 @@
 ---
-title: kastaneda.kiev.ua
-description: Дмитрий Колесников. Программист, веб-мастер, админ.
-lang: ru
+title: Життя та незвичайні пригоди Дона Карлоса
+description: Особистий блоґ
 timezone: Europe/Kiev
 url: https://kastaneda.kiev.ua
 baseurl: ''
+lang: uk
 
 exclude:
   - Makefile
