@@ -6,7 +6,9 @@
     <link rel="openid.delegate" href="https://kastaneda.dreamwidth.org/">
     <link rel="openid2.provider" href="https://www.dreamwidth.org/openid/server.bml">
     <link rel="openid2.local_id" href="https://kastaneda.dreamwidth.org/">
-    <meta name="description" content="Дмитрий Колесников. Программист, веб-мастер, админ.">
+{%- endif %}
+{%- if site.description %}
+    <meta name="description" content="{{ site.description }}">
 {%- endif %}
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
 {%- if page.dreamwidth %}
