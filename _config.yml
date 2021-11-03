@@ -39,10 +39,10 @@ i18n:
     nav:
     - link: /
       name: На початок
-    - link: /about.uk.html
-      name: Про цей сайт
-    - link: /contacts.uk.html
-      name: Контакти
+#   - link: /about.uk.html
+#     name: Про цей сайт
+#   - link: /contacts.uk.html
+#     name: Контакти
     - link: /feed.xml
       name: RSS
     - link: https://github.com/kastaneda/kastaneda.kiev.ua/
@@ -55,10 +55,10 @@ i18n:
     nav:
     - link: /
       name: Index
-    - link: /about.en.html
-      name: About this site
-    - link: /contacts.en.html
-      name: Contacts
+#   - link: /about.en.html
+#     name: About this site
+#   - link: /contacts.en.html
+#     name: Contacts
     - link: /feed.xml
       name: RSS
     - link: https://github.com/kastaneda/kastaneda.kiev.ua/
@@ -71,10 +71,10 @@ i18n:
     nav:
     - link: /
       name: В начало
-    - link: /about.ru.html
-      name: Про этот сайт
-    - link: /contacts.ru.html
-      name: Контакты
+#   - link: /about.ru.html
+#     name: Про этот сайт
+#   - link: /contacts.ru.html
+#     name: Контакты
     - link: /feed.xml
       name: RSS
     - link: https://github.com/kastaneda/kastaneda.kiev.ua/

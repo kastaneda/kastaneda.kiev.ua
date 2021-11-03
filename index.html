@@ -20,16 +20,15 @@ head_extras:
 
     <article class="blogpost" itemscope itemtype="http://schema.org/BlogPosting" {%- if _lang != _post_lang %} lang="{{ _post_lang }}"{%- endif %}>
       <h2 itemtype="headline"><a href="{{ _url }}">{{ post.title }}</a></h2>
-
       <section class="blogpost__meta">
         <span class="blogpost__date">
           <time datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}" itemprop="datePublished">
             {% include date-{{ _post_lang }}.html date=post.date
 %}          </time>
         </span>
-        <span class="blogpost__tags">
+        <!-- span class="blogpost__tags">
           <span title="Теґ">#</span><a href="#FIXME">FIXME</a>
-        </span>
+        </span -->
       </section>
 {%- unless post.only_title %}
 {%- capture _excerpt -%}
