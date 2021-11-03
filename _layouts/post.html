@@ -1,40 +1,43 @@
 ---
 layout: base
 ---
-    <header>
-      <h1>Життя та незвичайні пригоди Дона Карлоса</h1>
-    </header>
 
-    <main>
-      <article>
-        <h2>{{ page.title }}</h2>
+{%- assign _lang = page.lang | default: site.lang | default: 'en' %}
 
-        <p class="blogpost__meta">
-          <span class="blogpost__date">
-            {% include date-uk.html date=page.date %}
-          </span>
-          <span class="blogpost__tags">
-            <span title="Теґ">#</span><a href="#FIXME">FIXME</a>
-          </span>
-        </p>
+{%- include page-header.html %}
+
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+      <h1 itemtype="headline">{{ page.title }}</h1>
+
+      <section class="blogpost__meta">
+        <span class="blogpost__date">
+          <time datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}" itemprop="datePublished">
+            {% include date-{{ _lang }}.html date=page.date %}
+          </time>
+        </span>
+        <span class="blogpost__tags">
+          <span title="Теґ">#</span><a href="#FIXME">FIXME</a>
+        </span>
+      </section>
+
+      <section itemprop="articleBody">
 
 {{ content }}
+      </section>
 
-    {%- if page.dreamwidth or page.livejournal or page.crossposts %}
-        <ul class="blogpost__xc">
-    {%- if page.dreamwidth %}
-          <li>Cross-post: <a class="FIXME" style="color: inherit" href="https://kastaneda.dreamwidth.org/{{ page.dreamwidth }}.html">https://kastaneda.dreamwidth.org/{{ page.dreamwidth }}.html</a></li>
-    {%- endif %}
-    {%- if page.livejournal %}
-          <li>Cross-post: <a class="FIXME" style="color: inherit" href="https://kastaneda.livejournal.com/{{ page.livejournal }}.html">https://kastaneda.livejournal.com/{{ page.livejournal }}.html</a></li>
-    {%- endif %}
-    {%- for link in page.crossposts %}
-          <li>Cross-post: <a class="FIXME" style="color: inherit" href="{{ link }}">{{ link }}</a></li>
-    {%- endfor %}
-        </ul>
-    {%- endif %}
+{%- if page.dreamwidth or page.livejournal or page.crossposts %}
+      <ul class="blogpost__xc">
+{%- if page.dreamwidth %}
+        <li>Cross-post: <a class="FIXME" style="color: inherit" href="https://kastaneda.dreamwidth.org/{{ page.dreamwidth }}.html">https://kastaneda.dreamwidth.org/{{ page.dreamwidth }}.html</a></li>
+{%- endif %}
+{%- if page.livejournal %}
+        <li>Cross-post: <a class="FIXME" style="color: inherit" href="https://kastaneda.livejournal.com/{{ page.livejournal }}.html">https://kastaneda.livejournal.com/{{ page.livejournal }}.html</a></li>
+{%- endif %}
+{%- for link in page.crossposts %}
+        <li>Cross-post: <a class="FIXME" style="color: inherit" href="{{ link }}">{{ link }}</a></li>
+{%- endfor %}
+      </ul>
+{%- endif %}
+    </article>
 
-      </article>
-    </main>
-
-{% include page-footer.html %}
+{%- include page-footer.html %}
