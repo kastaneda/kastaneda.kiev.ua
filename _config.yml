@@ -39,9 +39,9 @@ i18n:
     nav:
     - link: /
       name: На початок
-    - link: /about.html
+    - link: /about.uk.html
       name: Про цей сайт
-    - link: /contacts.html
+    - link: /contacts.uk.html
       name: Контакти
     - link: /feed.xml
       name: RSS
@@ -55,9 +55,9 @@ i18n:
     nav:
     - link: /
       name: Index
-    - link: /about.html
+    - link: /about.en.html
       name: About this site
-    - link: /contacts.html
+    - link: /contacts.en.html
       name: Contacts
     - link: /feed.xml
       name: RSS
@@ -71,9 +71,9 @@ i18n:
     nav:
     - link: /
       name: В начало
-    - link: /about.html
+    - link: /about.ru.html
       name: Про этот сайт
-    - link: /contacts.html
+    - link: /contacts.ru.html
       name: Контакты
     - link: /feed.xml
       name: RSS

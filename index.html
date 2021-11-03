@@ -18,7 +18,7 @@ head_extras:
 {%- assign _post_lang = post.lang | default: site.lang | default: 'en' %}
 {%- assign _words = post.content | number_of_words %}
 
-    <section class="blogpost">
+    <section class="blogpost" {%- if _lang != _post_lang %} lang="{{ _post_lang }}"{%- endif %}>
       <h2><a href="{{ _url }}">{{ post.title }}</a></h2>
       <p class="blogpost__meta">
         <span class="blogpost__date">
@@ -40,4 +40,4 @@ head_extras:
     </section>
 {%- endfor %}
 
-{% include page-footer.html %}
+{%- include page-footer.html %}

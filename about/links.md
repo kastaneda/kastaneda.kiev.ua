@@ -1,5 +1,6 @@
 ---
 title: Мои места обитания в сети
+lang: ru
 ---
 
 [LiveJournal](https://kastaneda.livejournal.com/)
