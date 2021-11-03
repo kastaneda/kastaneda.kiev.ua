@@ -1,8 +1,7 @@
 {%- assign _lang = page.lang | default: site.lang | default: 'en' %}
 {%- assign _i18n = site.i18n[_lang] %}
-
     <meta charset="utf-8">
-    <title>{% if page.title %}{{ page.title }}
+    <title>{% if page.title %}{{- page.title -}}
            {%- else %}{{ _i18n.title | default: site.title }}{% endif %}</title>
 
 {%- if page.url == '/' %}

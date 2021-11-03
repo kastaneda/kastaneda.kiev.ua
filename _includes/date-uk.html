@@ -26,8 +26,14 @@
 {%- if _m == '11' %} листопада {% endif -%}
 {%- if _m == '12' %} грудня {% endif -%}
 
-<span class="opt">
-{{- include.date | date: '%Y' }} року,
-</span>
+{%- assign _y = include.date | date: '%Y' -%}
+{%- assign _y_now = site.time | date: '%Y' -%}
+{%- if _y == _y_now -%}
+<span class="opt">{{ _y }} року</span>,
+{%- else -%}
+{{ _y }}<span class="opt"> року</span>,
+{%- endif -%}
+
+
 
 {{- include.date | date: ' %H:%M' -}}.
