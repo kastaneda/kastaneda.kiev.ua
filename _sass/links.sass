@@ -1,0 +1,69 @@
+@mixin link
+  text-decoration: underline
+
+@mixin link-focused
+  @include link
+  outline: medium solid
+  outline-offset: 0.15rem
+
+@mixin link-definitions($link-color, $link-bg, $visited-color, $visited-bg, $active-color, $active-bg)
+  a:link
+    @include link
+    color: $link-color
+
+  a:focus, a:hover
+    @include link-focused
+    color: $link-color
+    background: $link-bg
+
+  a:visited
+    @include link
+    color: $visited-color
+
+  a:visited:focus, a:visited:hover
+    @include link-focused
+    color: $visited-color
+    background: $visited-bg
+
+  a:active, a:visited:active
+    @include link-focused
+    color: $active-color
+    background: $active-bg
+    outline-color: $active-bg
+    text-decoration: none
+
+@include link-definitions(#129, #cef, #624, #fed, #df9, #000)
+
+@media (prefers-color-scheme: dark)
+  @include link-definitions(#37c, #124, #a6d, #305, #000, #ce6)
+
+// Special links
+
+@mixin link-nav
+  @include link
+  text-decoration-style: dotted
+  color: inherit
+
+.blogpost__tags, .blogpost__xc, .page-footer
+  a:link, a:visited
+    @include link-nav
+
+  a:focus, a:hover
+    @include link-focused
+    @include link-nav
+    outline: medium dotted
+    background: unset
+
+  a:active, a:visited:active
+    text-decoration: none
+    outline: medium solid
+    outline-color: #000
+    color: #ce6
+    background: #000
+
+@media (prefers-color-scheme: dark)
+  .blogpost__tags, .blogpost__xc, .page-footer
+    a:active, a:visited:active
+      outline-color: #df9
+      color: #000
+      background: #df9

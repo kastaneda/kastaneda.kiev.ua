@@ -5,7 +5,7 @@
            {%- else %}{{ _i18n.title | default: site.title }}{% endif %}</title>
     <meta name="description" content="{{ _i18n.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- link rel="stylesheet" href="/style/main.css" -->
+    <link rel="stylesheet" href="/style/main.css">
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
 {%-  for _item in page.head_extras %}
     {{  _item }}

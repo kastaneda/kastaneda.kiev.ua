@@ -1,0 +1,54 @@
+
+body 
+  max-width: 50em
+  margin: auto
+  padding: 1em
+
+.page-header
+  border-bottom: thick double
+  h1
+    text-align: center
+    margin: 0
+
+.page-footer
+  border-top: thick double
+  padding: 0.35em 0 0 0
+
+  p, nav, ul, li
+    display: inline
+    margin: 0
+    padding: 0
+
+  li:before
+    content: ''
+    margin: .2em
+
+.blogpost
+  margin: 3em 0
+  pause-before: strong
+  
+  & + &:before
+    content: ''
+    display: block
+    width: 62%
+    margin: -1px auto 2.25em auto
+    border: none
+    border-top: 1px dashed
+
+.blogpost__date, .blogpost__readmore
+  font-style: italic
+
+@media (max-width: 32em)
+  .blogpost__date .opt
+    display: none
+
+.blogpost__tags
+  display: none
+
+@media (min-width: 21em)
+  .blogpost__tags
+    display: block
+
+  .blogpost__meta
+    display: grid
+    grid-template: auto / 3fr 2fr
