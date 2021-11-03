@@ -1,39 +1,34 @@
 {%- assign _w = include.date | date: '%u' -%}
-
 <span class="opt">
-{%- if _w == '1' %}Понеділок, {% endif -%}
-{%- if _w == '2' %}Вівторок, {% endif -%}
-{%- if _w == '3' %}Середа, {% endif -%}
-{%- if _w == '4' %}Четвер, {% endif -%}
-{%- if _w == '5' %}П'ятниця, {% endif -%}
-{%- if _w == '6' %}Субота, {% endif -%}
-{%- if _w == '7' %}Неділя, {% endif -%}
+{%- if _w == '1' -%} Понеділок,   {%- endif -%}
+{%- if _w == '2' -%} Вівторок,    {%- endif -%}
+{%- if _w == '3' -%} Середа,      {%- endif -%}
+{%- if _w == '4' -%} Четвер,      {%- endif -%}
+{%- if _w == '5' -%} П'ятниця,    {%- endif -%}
+{%- if _w == '6' -%} Субота,      {%- endif -%}
+{%- if _w == '7' -%} Неділя,      {%- endif -%}
 </span>
 
-{{- include.date | date: '%e' -}}
+{{- include.date | date: ' %e ' -}}
 
 {%- assign _m = include.date | date: '%m' -%}
-{%- if _m == '01' %} січня {% endif -%}
-{%- if _m == '02' %} лютого {% endif -%}
-{%- if _m == '03' %} березня {% endif -%}
-{%- if _m == '04' %} квітня {% endif -%}
-{%- if _m == '05' %} травня {% endif -%}
-{%- if _m == '06' %} червня {% endif -%}
-{%- if _m == '07' %} липня {% endif -%}
-{%- if _m == '08' %} серпня {% endif -%}
-{%- if _m == '09' %} вересня {% endif -%}
-{%- if _m == '10' %} жовтня {% endif -%}
-{%- if _m == '11' %} листопада {% endif -%}
-{%- if _m == '12' %} грудня {% endif -%}
+{%- if _m == '01' -%} січня       {%- endif -%}
+{%- if _m == '02' -%} лютого      {%- endif -%}
+{%- if _m == '03' -%} березня     {%- endif -%}
+{%- if _m == '04' -%} квітня      {%- endif -%}
+{%- if _m == '05' -%} травня      {%- endif -%}
+{%- if _m == '06' -%} червня      {%- endif -%}
+{%- if _m == '07' -%} липня       {%- endif -%}
+{%- if _m == '08' -%} серпня      {%- endif -%}
+{%- if _m == '09' -%} вересня     {%- endif -%}
+{%- if _m == '10' -%} жовтня      {%- endif -%}
+{%- if _m == '11' -%} листопада   {%- endif -%}
+{%- if _m == '12' -%} грудня      {%- endif -%}
 
-{%- assign _y = include.date | date: '%Y' -%}
+{%- assign _y = include.date  | date: '%Y' -%}
 {%- assign _y_now = site.time | date: '%Y' -%}
-{%- if _y == _y_now -%}
-<span class="opt">{{ _y }} року</span>,
-{%- else -%}
-{{ _y }}<span class="opt"> року</span>,
+{%- if _y == _y_now %} <span class="opt">{{ _y }} року</span>,
+{%- else %} {{ _y }}<span class="opt"> року</span>,
 {%- endif -%}
 
-
-
-{{- include.date | date: ' %H:%M' -}}.
+{{- include.date | date: '%k:%M' | strip | prepend: ' ' -}}.

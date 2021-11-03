@@ -1,32 +1,43 @@
 ---
-layout: frontpage
-robots: noindex
+layout: base
+head_extras: 
+- <link rel="openid.server" href="https://www.dreamwidth.org/openid/server.bml">
+- <link rel="openid.delegate" href="https://kastaneda.dreamwidth.org/">
+- <link rel="openid2.provider" href="https://www.dreamwidth.org/openid/server.bml">
+- <link rel="openid2.local_id" href="https://kastaneda.dreamwidth.org/">
+- <meta name="robots" content="noindex">
 ---
-        <header>
-          <h1>{{ site.title }}</h1>
-        </header>
+{%- assign _lang = page.lang | default: site.lang | default: 'en' %}
+{%- assign _i18n = site.i18n[_lang] %}
+    <header>
+      <h1>{{ _i18n.title }}</h1>
+    </header>
 
 {%- for post in site.posts %}
 {%- assign _url = post.url | prepend: site.baseurl %}
-{%- assign _lang = post.lang | default: site.lang | default: 'en' %}
+{%- assign _post_lang = post.lang | default: site.lang | default: 'en' %}
 {%- assign _words = post.content | number_of_words %}
-        <section class="blogpost">
-          <h2><a href="{{ _url }}">{{ post.title }}</a></h2>
-          <p class="blogpost__meta">
-            <span class="blogpost__date">
-              {%- include date-{{ _lang }}.html date=post.date -%}
-            </span>
-            <span class="blogpost__tags">
-              <span title="Теґ">#</span><a href="#FIXME">FIXME</a>
-            </span>
-          </p>
-{% unless post.only_title %}
-{% capture _excerpt -%}
+
+    <section class="blogpost">
+      <h2><a href="{{ _url }}">{{ post.title }}</a></h2>
+      <p class="blogpost__meta">
+        <span class="blogpost__date">
+          {% include date-{{ _post_lang }}.html date=post.date
+%}        </span>
+        <span class="blogpost__tags">
+          <span title="Теґ">#</span><a href="#FIXME">FIXME</a>
+        </span>
+      </p>
+{%- unless post.only_title %}
+{%- capture _excerpt -%}
 {{   post.excerpt | strip -}} 
 {%-  if post.content.size > post.excerpt.size -%}
-<!--FIX--><p><a href="{{ _url }}" class="blogpost__readmore">Читати далі… ({{ _words }} слів)</a></p>
+<!--cut--><p><a href="{{ _url }}" class="blogpost__readmore">Читати далі… ({{ _words }} слів)</a></p>
 {%- endif -%}
-{%- endcapture %}          {{ _excerpt | replace: "</p><!--FIX--><p>", " "  }}
+{%- endcapture %}
+      {{ _excerpt | replace: '</p><!--cut--><p>', ' ' | replace: '<!--cut-->', '' }}
 {%- endunless %}
-        </section>
-{% endfor %}
+    </section>
+{%- endfor %}
+
+{% include page-footer.html %}
