@@ -32,7 +32,9 @@ head_extras:
 {%- capture _excerpt -%}
 {{   post.excerpt | strip -}} 
 {%-  if post.content.size > post.excerpt.size -%}
-<!--cut--><p><a href="{{ _url }}" class="blogpost__readmore">Читати далі… ({{ _words }} слів)</a></p>
+<!--cut--><p><a href="{{ _url }}" class="blogpost__readmore">{%- capture _read_more -%}
+  {%- include read-more-{{ _post_lang }}.html words=_words -%}
+{%- endcapture -%}{{ _read_more | strip }}</a></p>
 {%- endif -%}
 {%- endcapture %}
       {{ _excerpt | replace: '</p><!--cut--><p>', ' ' | replace: '<!--cut-->', '' }}

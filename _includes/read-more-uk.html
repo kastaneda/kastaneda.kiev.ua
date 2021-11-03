@@ -1,0 +1,16 @@
+{%- assign _w10 = include.words | modulo: 10 -%}
+{%- assign _w100 = include.words | modulo: 100 -%}
+{%- assign _w10x = _w100 | divided_by: 10 -%}
+
+{%- assign _plural = 'слів' -%}
+{%- if _w10x != 1 -%}
+  {%- if _w10 == 1 -%}
+    {%- assign _plural = 'слово' -%}
+  {%- else -%}
+    {%- if _w10 == 2 or _w10 == 3 or _w10 == 4 -%}
+      {%- assign _plural = 'слова' -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endif -%}
+
+Читати далі… ({{ include.words }} {{ _plural }})
