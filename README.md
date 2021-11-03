@@ -66,3 +66,58 @@ Personal homepage
 ```
 
  - update mtime?
+
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+
+# alt-front.html
+
+## Layout: front page
+
+header.page-header
+  h1.page-header__title Життя та незвичайні пригоди Дона Карлоса
+section.blogpost
+  h2
+  p.blogpost__meta
+    span.blogpost__date
+    span.blogpost__tags
+  p
+    a.blogpost__readmore
+footer.page-footer
+  p.page-footer__copyrights
+  nav
+    ul
+      li
+        a
+
+
+
+
+main
+  article
+    header
+      h1
+    p.blogpost__meta
+    h2
+    h2
+    h3
+
+footer
+
+.page-footer
+.page-footer__links
+
+------------------------------------------------------------------------
+
+// Читати далі
+// Читать дальше
+// Read more
+
+// 111 слово
+// 112 слова
+// 115 слів
+
+fix 404
+

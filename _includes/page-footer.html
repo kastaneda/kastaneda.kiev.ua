@@ -1,9 +1,15 @@
+{%- assign _lang = page.lang | default: site.lang | default: 'en' %}
+{%- assign _i18n = site.i18n[_lang] %}
+
     <footer>
+      <p>{{ _i18n.copyrights }}</p>
       <nav>
-{%- if page.url != '/' %}
-        <a href="{{ '/' | prepend: site.baseurl }}">На главную страницу</a> |
-{%- endif %}
-        <a href="https://github.com/kastaneda/kastaneda.kiev.ua/blob/master/{{ page.path }}">Исходный код</a>
+        <ul>
+{%- for nav in _i18n.nav %} 
+{%-   if page.url != nav.link %}
+          <li><a href="{{ nav.link }}">{{ nav.name }}</a></li>
+{%-   endif %}
+{%- endfor %}
+        </ul>
       </nav>
-      © Дмитрий Колесников
     </footer>

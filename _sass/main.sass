@@ -1,45 +1,120 @@
-@import "reset.sass"
+////////////////////////////////////////////////////////////////////////
+// Fonts
+
+html
+  font-size: 120%
+  line-height: 150%
+
+h1
+  font-size: 135%
+  line-height: 150%
+  font-style: italic
+
+h2
+  font-size: 160%
+  line-height: 120%
+  voice-stress: strong
+
+h3
+  font-size: 145%
+  line-height: 150%
+
+h1, h2, h3
+  font-weight: normal
+
+@import 'fonts.sass'
 
 ////////////////////////////////////////////////////////////////////////
+// Colors
 
-$background-color: #fff         // основной фон
-$text-color: #000               // основной текст
-
-$muted-color: #666              // приглушённый цвет текста
-$header-color: #066             // цвет текста h1, h2, h3
-$selection-color: rgba(255, 255, 153, .5)       // фон выделения текста
-$box-shadow-color: #ccc         // тень вокруг блоков
-
-$blockquote-color: $header-color
-
-$link-color: #009               // все ссылки
-$link-visited-color: #609
-$link-active-color: #c33
-$link-focus-background-color: rgba(255, 255, 170, .5)
-$link-hover-color: lighten($link-color, 20%)
-$link-visited-hover-color: lighten($link-visited-color, 20%)
-$link-underline-color: #aaa
-$link-box-shadow: rgba(128, 128, 64, .5)
-
-$line: 24px                     // высота строки
-$font-size: 18px                // размер основного текста
-
-$font-h1-size: 48px
-$font-h2-size: 36px
-$font-h3-size: 28px             // высота строки вычисляется кратной $line
-
-$grit-size: 4px
-
-// «полосатый» фон есть для строк высотой 18, 20, 22 и 24px
-// $debug-background: "/style/img/line-height-" + $line + ".png"
+@import 'colors.sass'
 
 ////////////////////////////////////////////////////////////////////////
+// Blocks
 
-@import "body.sass"
-@import "fonts.sass"
-@import "text-blocks.sass"
-@import "block-contacts.sass"
-@import "block-footer.sass"
-@import "text-inline.sass"
-@import "block-source.sass"
-@import "misc.sass"
+body 
+  max-width: 50em
+  margin: auto
+  padding: 1em
+
+header
+  border-bottom: thick double
+
+footer
+  border-top: thick double
+
+header, footer
+  margin: 0
+
+section
+  margin: 3em 0
+  pause-before: strong
+
+hr, section + section:before
+  content: ''
+  display: block
+  width: 62%
+  margin: -1px auto 2.25em auto
+  border: none
+  border-top: 1px dashed
+
+h1
+  text-align: center
+  margin: 0
+
+section h2
+  margin: 0
+
+////////////////////////////////////////////////////////////////////////
+// Link decorations
+
+h2 a
+  text-decoration-thickness: 0.075em
+
+a:focus, a:hover
+  outline: medium solid
+  outline-offset: 0.15rem
+
+.blogpost__tags, .blogpost__xc, footer
+  a, a:visited
+    color: inherit
+    text-decoration-style: dotted
+    &:focus, &:hover
+      background: inherit
+      outline: medium dotted
+
+////////////////////////////////////////////////////////////////////////
+// Blogpost
+
+.blogpost__date, .blogpost__readmore
+  font-style: italic
+
+@media (max-width: 32em)
+  .blogpost__date .opt
+    display: none
+
+.blogpost__tags
+  display: none
+
+@media (min-width: 21em)
+  .blogpost__tags
+    display: block
+
+  .blogpost__meta
+    display: grid
+    grid-template: auto / 3fr 2fr
+
+////////////////////////////////////////////////////////////////////////
+// Footer
+
+footer
+  padding: 0.35em 0 0 0
+
+  p, nav, ul, li
+    display: inline
+    margin: 0
+    padding: 0
+
+  li:before
+    content: ''
+    margin: .2em

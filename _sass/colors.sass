@@ -1,0 +1,40 @@
+html
+  color: #130
+  background: #ffe
+
+header, footer
+  color: #666
+
+.blogpost__meta, .blogpost__xc
+  color: #386
+
+a
+  color: #129
+a:active
+  color: #fa5
+a:visited
+  color: #624
+a:focus, a:hover
+  background: #cef
+a:visited:focus, a:visited:hover
+  background: #fed
+
+@media (prefers-color-scheme: dark)
+  html
+    color: #d9dac3
+    background: #0a1311
+
+  a
+    color: #37c
+  a:visited
+    color: #a6d
+  a:focus, a:hover
+    background: #124
+  a:visited:focus, a:visited:hover
+    background: #305
+
+@media print
+  html
+    color: #000
+    background: #fff
+

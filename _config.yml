@@ -1,26 +1,23 @@
 ---
-title: Життя та незвичайні пригоди Дона Карлоса
-description: Особистий блоґ
 timezone: Europe/Kiev
 url: https://kastaneda.kiev.ua
 baseurl: ''
-lang: uk
 
 exclude:
-  - Makefile
-  - README
-  - kastaneda.kiev.ua.tar.gz
-  - build.sh
+- Makefile
+- README
+- kastaneda.kiev.ua.tar.gz
+- build.sh
 
 defaults:
-  - scope:
-      path: ''
-    values:
-      layout: page
-  - scope:
-      type: posts
-    values:
-      layout: post
+- scope:
+    path: ''
+  values:
+    layout: page
+- scope:
+    type: posts
+  values:
+    layout: post
 
 collections:
   posts:
@@ -28,6 +25,58 @@ collections:
     output: true
 
 sass:
-  style: compressed
+  style: compact
 
 highlighter: rouge
+
+title: Життя та незвичайні пригоди Дона Карлоса
+description: Особистий блоґ
+lang: uk
+
+i18n:
+  uk:
+    copyrights: © 2001–2021 Дмитро Колесников.
+    nav:
+    - link: /
+      name: На початок
+    - link: /about.html
+      name: Про цей сайт
+    - link: /contacts.html
+      name: Контакти
+    - link: /feed.xml
+      name: RSS
+    - link: https://github.com/kastaneda/kastaneda.kiev.ua/
+      name: GitHub
+
+  en:
+    title: The life and unusual adventures of Don Karlos
+    description: Personal blog
+    copyrights: © 2001–2021 Dmytro Kolesnykov.
+    nav:
+    - link: /
+      name: Index
+    - link: /about.html
+      name: About this site
+    - link: /contacts.html
+      name: Contacts
+    - link: /feed.xml
+      name: RSS
+    - link: https://github.com/kastaneda/kastaneda.kiev.ua/
+      name: GitHub
+
+  ru:
+    title: Жизнь и необычные приключения Дона Карлоса
+    description: Personal blog
+    copyrights: © 2001–2021 Дмитрий Колесников.
+    nav:
+    - link: /
+      name: В начало
+    - link: /about.html
+      name: Про этот сайт
+    - link: /contacts.html
+      name: Контакты
+    - link: /feed.xml
+      name: RSS
+    - link: https://github.com/kastaneda/kastaneda.kiev.ua/
+      name: GitHub
+      

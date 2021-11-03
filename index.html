@@ -1,0 +1,31 @@
+---
+layout: frontpage
+robots: noindex
+---
+
+        <header>
+          <h1>{{ site.title }}</h1>
+        </header>
+
+{% for post in site.posts %}
+{%- assign _url = post.url | prepend: site.baseurl %}
+        <section class="blogpost">
+          <h2><a href="{{ _url }}">{{ post.title }}</a></h2>
+          <p class="blogpost__meta">
+            <span class="blogpost__date">
+              {% include date-uk.html date=post.date %}
+            </span>
+            <span class="blogpost__tags">
+              <span title="Теґ">#</span><a href="#FIXME">FIXME</a>
+            </span>
+          </p>
+{% unless post.only_title %}
+{% capture _excerpt -%}
+{{   post.excerpt | strip -}} 
+{%-  if post.content.size > post.excerpt.size -%}
+<!--FIX--><p><a href="{{ _url }}" class="blogpost__readmore">Читати далі… ({{ post.content | number_of_words }} слів)</a></p>
+{%- endif -%}
+{%- endcapture %}          {{ _excerpt | replace: "</p><!--FIX--><p>", " "  }}
+{%- endunless %}
+        </section>
+{% endfor %}

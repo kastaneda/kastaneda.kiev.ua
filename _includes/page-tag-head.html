@@ -1,15 +1,25 @@
+{%- assign _lang = page.lang | default: site.lang | default: 'en' %}
+{%- assign _i18n = site.i18n[_lang] %}
+
     <meta charset="utf-8">
-    <title>{% if page.title %}{{ page.title }} ★ {{ site.title }}
-           {%- else %}{{ site.title }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title }}
+           {%- else %}{{ _i18n.title | default: site.title }}{% endif %}</title>
+
 {%- if page.url == '/' %}
     <link rel="openid.server" href="https://www.dreamwidth.org/openid/server.bml">
     <link rel="openid.delegate" href="https://kastaneda.dreamwidth.org/">
     <link rel="openid2.provider" href="https://www.dreamwidth.org/openid/server.bml">
     <link rel="openid2.local_id" href="https://kastaneda.dreamwidth.org/">
 {%- endif %}
+
 {%- if site.description %}
     <meta name="description" content="{{ site.description }}">
 {%- endif %}
+
+{%- if page.robots %}
+    <meta name="robots" content="{{ page.robots }}">
+{%- endif %}
+
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
 {%- if page.dreamwidth %}
     <link rel="alternate" href="https://kastaneda.dreamwidth.org/{{ page.dreamwidth }}.html">
@@ -20,6 +30,7 @@
 {%- for link in page.crossposts %}
     <link rel="alternate" href="{{ link }}">
 {%- endfor %}
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
 {{ '@import "main"' | sassify | remove_first: '@charset "UTF-8";' | strip }} 
