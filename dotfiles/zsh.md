@@ -1,5 +1,0 @@
----
-title: Мой ~/.zshrc
----
-
-FIXME
