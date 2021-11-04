@@ -1,5 +1,5 @@
 {%- assign _lang = page.lang | default: site.lang | default: 'en' %}
 {%- assign _i18n = site.i18n[_lang] %}
     <header class="page-header">
-      <h1>{{ _i18n.title }}</h1>
+      {{ _i18n.title }}
     </header>

@@ -7,9 +7,9 @@ layout: base
 {%- include page-header.html %}
 
     <article class="blogpost blogpost-single" itemscope itemtype="http://schema.org/BlogPosting">
-      <h1 itemtype="headline">{{ page.title }}</h1>
+      <h1>{{ page.title }}</h1>
 
-      <section class="blogpost__meta">
+      <p class="blogpost__meta">
         <span class="blogpost__date">
           <time datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}" itemprop="datePublished">
             {% include date-{{ _lang }}.html date=page.date %}
@@ -18,7 +18,7 @@ layout: base
         <!-- span class="blogpost__tags">
           <span title="Теґ">#</span><a href="#FIXME">FIXME</a>
         </span -->
-      </section>
+      </p>
 
       <section itemprop="articleBody">
 
