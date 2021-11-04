@@ -9,7 +9,7 @@
 {%- if _w == '7' -%} Воскресенье, {%- endif -%}
 </span>
 
-{{- include.date | date: ' %e ' -}}
+{{- include.date | date: ' %e ' -}}&nbsp;
 
 {%- assign _m = include.date | date: '%m' -%}
 {%- if _m == '01' -%} января      {%- endif -%}
