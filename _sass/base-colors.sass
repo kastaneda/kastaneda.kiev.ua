@@ -1,5 +1,5 @@
 html
-  color: #130
+  color: #330
   background: #ffe
 
 h1, h2, h3
@@ -11,6 +11,19 @@ h1, h2, h3
 .blogpost__meta, .blogpost__xc
   color: #386
 
+code
+  color: #055
+
+kbd
+  padding: 0 .35em
+  border-radius: .3em
+  background: #ddd linear-gradient(150deg, #bbb, #fff)
+  border: 2px outset
+
+del
+  color: #455
+  text-decoration-color: #c009
+
 @media (prefers-color-scheme: dark)
   html
     color: #d9dac3
@@ -19,11 +32,24 @@ h1, h2, h3
   h1, h2, h3
     color: #ae9
 
+  code
+    color: #9bb
+
+  kbd
+    color: #000
+    background: #777 linear-gradient(150deg, #555, #999)
+
   del
-    color: #aa9
-    text-decoration-color: #666
+    color: #988
+    text-decoration-thickness: 15%
+    text-decoration-color: #c009
+    code
+      color: #99a5a5
 
 @media print
   html
     color: #000
     background: #fff
+
+  kbd
+    background: none

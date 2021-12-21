@@ -1,10 +1,7 @@
-html
-  font-size: 1.1rem
-  line-height: 1.8rem
-
 h1, h2, h3
   font-weight: normal
   margin: 1.5rem 0 1rem 0
+  page-break-after: avoid
 
 h1
   font-size: 2.2rem
@@ -26,6 +23,9 @@ blockquote
   border-left: thin dashed
   font-style: italic
 
+pre, code, blockquote
+  page-break-inside: avoid
+
 hr
   content: ''
   display: block
@@ -36,7 +36,6 @@ hr
 
 del
   text-decoration-line: line-through
-  text-decoration-style: double
   font-style: italic
 
 img
