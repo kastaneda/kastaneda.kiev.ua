@@ -2,3 +2,5 @@
 /.jekyll-cache/
 /.sass-cache/
 /kastaneda.kiev.ua.tar.gz
+_build
+_build_lock
